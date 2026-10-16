@@ -71,7 +71,7 @@ No comments in version 1.
 
 ### Templates
 
-`index`, `front-page`, `page`, `single`, `archive`, `search`, `404`; parts `header` and `footer`.
+`index`, `page`, `single`, `archive`, `search`, `404`; parts `header` and `footer`.
 
 ## Steps
 
@@ -82,7 +82,7 @@ Each step is one or two commits; lint and build before each commit.
 3. [x] Color schemes (`src/Scheme/`): settings group with identifiers, block support with editor control, CSS output with the derived tones, scheme editor with preview and contrast check. The support control loads once a block uses the support (step 4).
 4. [x] Section and Group blocks with widths and schemes; header and footer parts from blocks; Copyright. The legal links in the footer follow with the Paragraph (step 5).
 5. [x] Content blocks: Heading, Paragraph, List, Image, Buttons, Columns, Quote, Separator, Details; the footer gets a paragraph for the legal links. (Found and fixed in the framework: void root elements such as `<hr>` in the editor.)
-6. [ ] Query, Post Template and Pagination; the blog templates `single`, `archive`, `search`, `404`.
+6. [x] Query (posts of the page or the latest posts), Post Template (`Repeater`, list or grid), Pagination (posts of the page; in the editor a sample, and the latest posts stand in for the posts of the page, since editor renders go through the REST API); the templates `index`, `single`, `archive`, `search`, `404` (`front-page.html` removed: WordPress uses `page.html` for a static front page and `index.html` for the blog).
 7. [ ] Browser tests (schemes, sections, legal links in the footer, editor), release test in wp-test-env.
 
 ## Dependencies

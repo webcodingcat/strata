@@ -1,0 +1,10 @@
+{# In the editor a sample, since the posts of the page are unknown there; on the front end nothing for one page. #}
+{% if links or sample %}
+    <nav {{ block_wrapper_attributes({class: 'strata-pagination flex flex-wrap items-center gap-2 text-sm'}) }} aria-label="Pagination">
+        {% if sample %}
+            <span class="page-numbers">{{ attrs.previous }}</span><span class="page-numbers current">1</span><span class="page-numbers">2</span><span class="page-numbers">{{ attrs.next }}</span>
+        {% else %}
+            {% for link in links %}{{ link|raw }}{% endfor %}
+        {% endif %}
+    </nav>
+{% endif %}

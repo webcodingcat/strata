@@ -1,0 +1,8 @@
+{% set layouts = {list: 'flex flex-col gap-10', grid: 'grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3'} %}
+<ul {{ block_wrapper_attributes({class: 'strata-post-template m-0 list-none p-0 ' ~ layouts[attrs.layout.value]}) }}>
+    {% for item in items %}
+        <li{{ repeater_item(item) }} class="strata-post-template__item flex flex-col gap-2">{{ item.content|raw }}</li>
+    {% else %}
+        <li class="strata-post-template__empty text-ink-soft">{{ attrs.emptyText }}</li>
+    {% endfor %}
+</ul>

@@ -59,6 +59,37 @@
                 "bottom": "0",
                 "left": "0"
             }
+        },
+        "elements": {
+            "button": {
+                "color": {
+                    "background": "var(--scheme-accent)",
+                    "text": "var(--scheme-bg)"
+                },
+                "border": {
+                    "radius": "0.5rem"
+                },
+                "typography": {
+                    "fontFamily": "inherit",
+                    "fontWeight": "600"
+                },
+                ":hover": {
+                    "color": {
+                        "background": "var(--scheme-accent-strong)",
+                        "text": "var(--scheme-bg)"
+                    }
+                }
+            },
+            "link": {
+                "color": {
+                    "text": "var(--scheme-accent)"
+                },
+                ":hover": {
+                    "color": {
+                        "text": "var(--scheme-accent-strong)"
+                    }
+                }
+            }
         }
     },
     "templateParts": [
