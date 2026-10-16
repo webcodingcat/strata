@@ -1,7 +1,10 @@
 /*
- * Stylesheet, compiled with Tailwind CSS by the framework's webpack helper into
- * build/styles.css and loaded on the front end and in the editor canvas.
- * Tokens point to the CSS variables WordPress generates from theme.json.
+ * Stylesheet of Strata, compiled with Tailwind CSS by the framework's webpack helper into build/styles.css and loaded
+ * on the front end and in the editor canvas.
+ *
+ * Colors come from the color schemes (PLAN.md, Colors): every scheme sets --scheme-bg, --scheme-fg and
+ * --scheme-accent on :root (the page scheme) and on its class; the tones derive from them per element, so a section
+ * with another scheme recomputes them. Tailwind's palette is reset: only the scheme tokens exist.
  */
 @layer theme, base, components, utilities;
 @import "tailwindcss/theme.css" layer(theme);
@@ -9,7 +12,101 @@
 
 @source "../src/**/*.twig";
 
+@font-face {
+	/* wp-app-framework: preload */
+	font-family: "Geist";
+	src: url("./fonts/Geist-Variable.woff2") format("woff2");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
 @theme inline {
-	--color-primary: var(--wp--preset--color--primary);
-	--color-contrast: var(--wp--preset--color--contrast);
+	--color-*: initial;
+	--color-canvas: var(--scheme-bg);
+	--color-canvas-soft: var(--scheme-bg-soft);
+	--color-canvas-strong: var(--scheme-bg-strong);
+	--color-ink: var(--scheme-fg);
+	--color-ink-soft: var(--scheme-fg-soft);
+	--color-ink-faint: var(--scheme-fg-faint);
+	--color-line: var(--scheme-line);
+	--color-line-strong: var(--scheme-line-strong);
+	--color-accent: var(--scheme-accent);
+	--color-accent-strong: var(--scheme-accent-strong);
+	--color-accent-soft: var(--scheme-accent-soft);
+	--color-transparent: transparent;
+	--color-current: currentColor;
+}
+
+@theme {
+	--font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+
+	/* Fluid type: from a 360 px to a 1280 px wide viewport. */
+	--text-sm: 0.875rem;
+	--text-base: clamp(1rem, 0.96rem + 0.18vw, 1.0625rem);
+	--text-lg: clamp(1.125rem, 1.06rem + 0.27vw, 1.25rem);
+	--text-xl: clamp(1.25rem, 1.13rem + 0.54vw, 1.5rem);
+	--text-2xl: clamp(1.5rem, 1.3rem + 0.87vw, 2rem);
+	--text-3xl: clamp(1.875rem, 1.53rem + 1.52vw, 2.75rem);
+	--text-4xl: clamp(2.25rem, 1.72rem + 2.39vw, 3.75rem);
+
+	/* Content widths of a section and the space around its content. */
+	--container-narrow: 42rem;
+	--container-normal: 54rem;
+	--container-wide: 76rem;
+	--spacing-gutter: clamp(1rem, 0.6rem + 1.8vw, 2.5rem);
+	--spacing-section: clamp(3rem, 2.2rem + 3.5vw, 6rem);
+	--spacing-flow: 1.25rem;
+
+	--radius-control: 0.5rem;
+}
+
+@layer base {
+	/* The page scheme until the settings print theirs; the default of the settings group. */
+	:root {
+		--scheme-bg: #ffffff;
+		--scheme-fg: #16181d;
+		--scheme-accent: #2f5bea;
+	}
+
+	/* Tones of the scheme, mixed towards its other color, so they work in light and in dark schemes. */
+	:root,
+	.has-scheme {
+		--scheme-bg-soft: color-mix(in oklab, var(--scheme-bg) 94%, var(--scheme-fg));
+		--scheme-bg-strong: color-mix(in oklab, var(--scheme-bg) 86%, var(--scheme-fg));
+		--scheme-fg-soft: color-mix(in oklab, var(--scheme-fg) 78%, var(--scheme-bg));
+		--scheme-fg-faint: color-mix(in oklab, var(--scheme-fg) 58%, var(--scheme-bg));
+		--scheme-line: color-mix(in oklab, var(--scheme-fg) 14%, var(--scheme-bg));
+		--scheme-line-strong: color-mix(in oklab, var(--scheme-fg) 30%, var(--scheme-bg));
+		--scheme-accent-strong: color-mix(in oklab, var(--scheme-accent) 82%, var(--scheme-fg));
+		--scheme-accent-soft: color-mix(in oklab, var(--scheme-accent) 14%, var(--scheme-bg));
+		background-color: var(--scheme-bg);
+		color: var(--scheme-fg);
+	}
+
+	body {
+		margin: 0;
+		font-family: var(--font-sans);
+		font-size: var(--text-base);
+		line-height: 1.6;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	a {
+		color: var(--scheme-accent);
+		text-underline-offset: 0.2em;
+	}
+
+	a:hover {
+		color: var(--scheme-accent-strong);
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--scheme-accent);
+		outline-offset: 2px;
+	}
+
+	::selection {
+		background-color: var(--scheme-accent-soft);
+	}
 }

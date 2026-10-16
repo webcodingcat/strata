@@ -2,32 +2,75 @@
     "$schema": "https://schemas.wp.org/wp/7.1/theme.json",
     "version": 3,
     "settings": {
-        "appearanceTools": true,
+        "appearanceTools": false,
         "color": {
-            "palette": [
-                {
-                    "name": "Primary",
-                    "slug": "primary",
-                    "color": "#1e4d8c"
-                },
-                {
-                    "name": "Contrast",
-                    "slug": "contrast",
-                    "color": "#fafafa"
-                }
-            ]
+            "custom": false,
+            "customGradient": false,
+            "defaultDuotone": false,
+            "defaultGradients": false,
+            "defaultPalette": false,
+            "duotone": [],
+            "gradients": [],
+            "palette": [],
+            "text": false,
+            "background": false,
+            "link": false
         },
-        "layout": {
-            "contentSize": "720px",
-            "wideSize": "1200px"
+        "typography": {
+            "customFontSize": false,
+            "defaultFontSizes": false,
+            "dropCap": false,
+            "fontSizes": [],
+            "fontStyle": false,
+            "fontWeight": false,
+            "letterSpacing": false,
+            "lineHeight": false,
+            "textDecoration": false,
+            "textTransform": false,
+            "writingMode": false
         },
         "spacing": {
-            "blockGap": true
+            "blockGap": false,
+            "margin": false,
+            "padding": false,
+            "customSpacingSize": false,
+            "defaultSpacingSizes": false
+        },
+        "layout": {
+            "allowEditing": false,
+            "allowCustomContentAndWideSize": false
+        },
+        "shadow": {
+            "defaultPresets": false
+        },
+        "border": {
+            "color": false,
+            "radius": false,
+            "style": false,
+            "width": false
         }
     },
     "styles": {
         "spacing": {
-            "blockGap": "1.5rem"
+            "blockGap": "0",
+            "padding": {
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0"
+            }
         }
-    }
+    },
+    "templateParts": [
+        {
+            "name": "header",
+            "title": "Header",
+            "area": "header"
+        },
+        {
+            "name": "footer",
+            "title": "Footer",
+            "area": "footer"
+        }
+    ]
 }
