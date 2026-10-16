@@ -23,7 +23,12 @@ docker compose -f ../wp-dev-env/compose.yaml run --rm tools npm --prefix /worksp
 docker compose -f ../wp-dev-env/compose.yaml run --rm tools composer build-manifest --working-dir=/workspace/strata
 ```
 
-Browser tests run in wp-test-env with the pool files in `tests/` (`dev.pools`, `release.pools`); never against wp-dev-env.
+Browser tests run in wp-test-env with the pool files in `tests/` (`dev.pools`, `release.pools`); never against wp-dev-env. wp-test-env lies in `../framework/`, so its workspace is set to this directory's parent:
+
+```sh
+WP_TEST_ENV_WORKSPACE=/home/saij/dev/wp-dev ../framework/wp-test-env/bin/run "$PWD/tests/dev.pools"       # before a push
+WP_TEST_ENV_WORKSPACE=/home/saij/dev/wp-dev ../framework/wp-test-env/bin/run "$PWD/tests/release.pools"   # the release ZIP
+```
 
 ## Keep in sync
 

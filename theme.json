@@ -79,16 +79,6 @@
                         "text": "var(--scheme-bg)"
                     }
                 }
-            },
-            "link": {
-                "color": {
-                    "text": "var(--scheme-accent)"
-                },
-                ":hover": {
-                    "color": {
-                        "text": "var(--scheme-accent-strong)"
-                    }
-                }
             }
         }
     },

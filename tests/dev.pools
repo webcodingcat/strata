@@ -8,7 +8,7 @@
 prepare strata
 
 pool strata
-instances 2
+instances 3
 themes strata
 activate strata
 e2e strata

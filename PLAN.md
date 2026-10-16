@@ -83,7 +83,7 @@ Each step is one or two commits; lint and build before each commit.
 4. [x] Section and Group blocks with widths and schemes; header and footer parts from blocks; Copyright. The legal links in the footer follow with the Paragraph (step 5).
 5. [x] Content blocks: Heading, Paragraph, List, Image, Buttons, Columns, Quote, Separator, Details; the footer gets a paragraph for the legal links. (Found and fixed in the framework: void root elements such as `<hr>` in the editor.)
 6. [x] Query (posts of the page or the latest posts), Post Template (`Repeater`, list or grid), Pagination (posts of the page; in the editor a sample, and the latest posts stand in for the posts of the page, since editor renders go through the REST API); the templates `index`, `single`, `archive`, `search`, `404` (`front-page.html` removed: WordPress uses `page.html` for a static front page and `index.html` for the blog).
-7. [ ] Browser tests (schemes, sections, legal links in the footer, editor), release test in wp-test-env.
+7. [x] Browser tests (`tests/e2e/specs/`: sections, schemes and the scheme editor, header and footer, the allowed blocks and every block in the editor, the blog), green in the dev pool. The release pool passes once the framework release with the fix for void root elements (`<hr>` of the separator in the editor, framework `main` 7cc03f1) is out: 0.18.1.
 
 ## Dependencies
 

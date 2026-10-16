@@ -9,6 +9,6 @@ prepare strata
 tools strata composer release
 
 pool strata-release
-instances 2
+instances 3
 theme-zip strata/dist/strata-*.zip
 e2e strata
