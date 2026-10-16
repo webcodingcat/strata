@@ -1,0 +1,15 @@
+/*
+ * Stylesheet, compiled with Tailwind CSS by the framework's webpack helper into
+ * build/styles.css and loaded on the front end and in the editor canvas.
+ * Tokens point to the CSS variables WordPress generates from theme.json.
+ */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+
+@source "../src/**/*.twig";
+
+@theme inline {
+	--color-primary: var(--wp--preset--color--primary);
+	--color-contrast: var(--wp--preset--color--contrast);
+}

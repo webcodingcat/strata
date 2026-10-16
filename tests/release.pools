@@ -1,0 +1,14 @@
+# Test pools of the release ZIP, for bin/run of wp-test-env
+# (https://github.com/saijsaij/wp-test-env), e.g.
+#
+#   bin/run ../strata/tests/release.pools
+#
+# Builds the release ZIP (composer release needs a Git repository) and installs the
+# newest ZIP of dist/.
+prepare strata
+tools strata composer release
+
+pool strata-release
+instances 2
+theme-zip strata/dist/strata-*.zip
+e2e strata
