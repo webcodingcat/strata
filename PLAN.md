@@ -87,5 +87,5 @@ Each step is one or two commits; lint and build before each commit.
 
 ## Dependencies
 
-- The theme uses framework features that are on `main` but not released yet (`#[Identifier]`, settings scripts, `Repeater` and `#[Item]`). Locally the package link of wp-dev-env runs the framework checkout; the release workflow and a release ZIP need a framework release (0.18) and `"saij/wp-app-framework": "^0.18"` in `composer.json`. Releases only on explicit request.
-- GitHub remote `saijsaij/strata`: not created yet (after agreement, with `gh`).
+- wp-app-framework 0.18 (`#[Identifier]`, settings scripts, `Repeater` and `#[Item]`), required as `^0.18`; locally the package link of wp-dev-env runs the framework checkout.
+- Repository: https://github.com/saijsaij/strata

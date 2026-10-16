@@ -27,5 +27,5 @@ Browser tests run in wp-test-env with the pool files in `tests/` (`dev.pools`, `
 
 ## Keep in sync
 
-- `composer.json` requires the released framework; features of the framework's `main` need a framework release before the release workflow of the theme can pass (`PLAN.md`, Dependencies).
+- `composer.json` requires the released framework (`^0.18`); a feature of the framework's `main` needs a framework release before the release workflow of the theme can pass.
 - A release tag `v<version>` equals `Version:` in `style.css`; every GitHub release gets written release notes.
