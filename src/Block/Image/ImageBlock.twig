@@ -1,0 +1,9 @@
+{% set image = wp_attachment_image(attrs.imageId, 'large', {class: 'block h-auto w-full' ~ (attrs.rounded ? ' rounded-control' : '')}) %}
+<figure {{ block_wrapper_attributes({class: 'strata-image m-0'}) }}>
+    <div class="strata-image__media"{{ field('imageId') }}>
+        {% if attrs.link.url and not is_editor() %}<a {{ link_attributes(attrs.link) }}>{{ image }}</a>{% else %}{{ image }}{% endif %}
+    </div>
+    {% if attrs.caption or is_editor() %}
+        <figcaption class="mt-2 text-sm text-ink-soft"{{ field('caption') }}>{{ attrs.caption|raw }}</figcaption>
+    {% endif %}
+</figure>

@@ -1,0 +1,3 @@
+{% set sizes = {small: 'text-sm', normal: 'text-base', lead: 'text-lg text-ink-soft'} %}
+{% set aligns = {start: 'text-start', center: 'text-center', end: 'text-end'} %}
+<p {{ block_wrapper_attributes({class: 'strata-paragraph m-0 ' ~ sizes[attrs.size.value] ~ ' ' ~ aligns[attrs.textAlign.value]}) }}{{ field('text') }}>{{ attrs.text|raw }}</p>

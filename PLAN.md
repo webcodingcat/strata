@@ -58,7 +58,7 @@ Own blocks in version 1 (namespace `strata`):
 | Columns / Column | 2–4 columns, stacked on small screens |
 | Heading | text in the post content (`#[RichText(postContent: true)]`), level 1–4 |
 | Paragraph | text in the post content |
-| List / List item | items as blocks with their text in the post content, nested lists possible |
+| List / List item | items as blocks with their text in the post content; no nested lists in version 1 (a block cannot have inner blocks and a post content field) |
 | Image | attachment, caption, optional link |
 | Buttons / Button | link (`Link`), style primary/secondary |
 | Quote | text and citation |
@@ -81,7 +81,7 @@ Each step is one or two commits; lint and build before each commit.
 2. [x] Base: Geist, `theme.json` (design tools of WordPress off: colors, type and spacing come from the theme), Tailwind tokens in `assets/styles.css`, templates `index`, `front-page`, `page` and the parts (interim content until step 4), allowed blocks (`src/Editor/AllowedBlocks.php`: blocks of the theme and of plugins, core blocks of the allowed list only).
 3. [x] Color schemes (`src/Scheme/`): settings group with identifiers, block support with editor control, CSS output with the derived tones, scheme editor with preview and contrast check. The support control loads once a block uses the support (step 4).
 4. [x] Section and Group blocks with widths and schemes; header and footer parts from blocks; Copyright. The legal links in the footer follow with the Paragraph (step 5).
-5. [ ] Content blocks: Heading, Paragraph, List, Image, Buttons, Columns, Quote, Separator, Details.
+5. [x] Content blocks: Heading, Paragraph, List, Image, Buttons, Columns, Quote, Separator, Details; the footer gets a paragraph for the legal links. (Found and fixed in the framework: void root elements such as `<hr>` in the editor.)
 6. [ ] Query, Post Template and Pagination; the blog templates `single`, `archive`, `search`, `404`.
 7. [ ] Browser tests (schemes, sections, legal links in the footer, editor), release test in wp-test-env.
 

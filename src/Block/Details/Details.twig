@@ -1,0 +1,6 @@
+{# In the editor a div: a click into the summary of a <details> would close it. #}
+{% set tag = is_editor() ? 'div' : 'details' %}
+<{{ tag }} {{ block_wrapper_attributes({class: 'strata-details group border-b border-line py-3'}) }}{% if attrs.open and not is_editor() %} open{% endif %}>
+    <{{ is_editor() ? 'div' : 'summary' }} class="strata-details__summary flex cursor-pointer list-none items-center justify-between gap-4 font-semibold"><span{{ field('summary') }}>{{ attrs.summary }}</span><span class="text-accent transition-transform group-open:rotate-45" aria-hidden="true">+</span></{{ is_editor() ? 'div' : 'summary' }}>
+    <div class="strata-details__content mt-3 flex flex-col gap-flow"{{ inner_blocks() }}>{{ content|raw }}</div>
+</{{ tag }}>

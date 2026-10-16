@@ -1,0 +1,2 @@
+{% set aligns = {start: 'justify-start', center: 'justify-center', end: 'justify-end'} %}
+<div {{ block_wrapper_attributes({class: 'strata-column flex min-w-0 flex-col gap-flow ' ~ aligns[attrs.verticalAlign.value]}) }}{{ inner_blocks() }}>{{ content|raw }}</div>

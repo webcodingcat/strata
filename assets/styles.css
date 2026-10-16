@@ -84,6 +84,13 @@
 		color: var(--scheme-fg);
 	}
 
+	/* Widths include padding and borders (Tailwind's Preflight is not imported, see the framework's styles guide). */
+	*,
+	::before,
+	::after {
+		box-sizing: border-box;
+	}
+
 	body {
 		margin: 0;
 		font-family: var(--font-sans);
@@ -131,7 +138,8 @@
 		color: var(--scheme-fg-soft);
 	}
 
-	.strata-group.has-scheme {
+	.strata-group.has-scheme,
+	.strata-column.has-scheme {
 		padding: clamp(1.25rem, 0.9rem + 1.5vw, 2rem);
 		border-radius: var(--radius-control);
 	}

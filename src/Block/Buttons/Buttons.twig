@@ -1,0 +1,2 @@
+{% set justify = {start: 'justify-start', center: 'justify-center', end: 'justify-end'} %}
+<div {{ block_wrapper_attributes({class: 'strata-buttons flex flex-wrap gap-3 ' ~ justify[attrs.justify.value]}) }}{{ inner_blocks() }}>{{ content|raw }}</div>
