@@ -1,0 +1,5 @@
+{% set layouts = {stack: 'flex-col', row: 'flex-row'} %}
+{% set justify = {start: 'justify-start', center: 'justify-center', end: 'justify-end', between: 'justify-between'} %}
+{% set align = {stretch: 'items-stretch', start: 'items-start', center: 'items-center', end: 'items-end', baseline: 'items-baseline'} %}
+{% set gaps = {none: 'gap-0', small: 'gap-2', normal: 'gap-flow', large: 'gap-10'} %}
+<div {{ block_wrapper_attributes({class: 'strata-group flex ' ~ layouts[attrs.layout.value] ~ ' ' ~ justify[attrs.justify.value] ~ ' ' ~ align[attrs.alignItems.value] ~ ' ' ~ gaps[attrs.gap.value] ~ (attrs.wrap and attrs.layout.value == 'row' ? ' flex-wrap' : '')}) }}{{ inner_blocks() }}>{{ content|raw }}</div>

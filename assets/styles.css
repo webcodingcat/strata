@@ -110,3 +110,39 @@
 		background-color: var(--scheme-accent-soft);
 	}
 }
+
+/* Core blocks the theme keeps, and the box of a group with a color scheme. */
+@layer components {
+	.wp-block-site-title {
+		margin: 0;
+		font-size: var(--text-lg);
+		font-weight: 650;
+		letter-spacing: -0.01em;
+	}
+
+	.wp-block-site-title a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.wp-block-site-tagline {
+		margin: 0;
+		font-size: var(--text-sm);
+		color: var(--scheme-fg-soft);
+	}
+
+	.strata-group.has-scheme {
+		padding: clamp(1.25rem, 0.9rem + 1.5vw, 2rem);
+		border-radius: var(--radius-control);
+	}
+
+	/* The header and footer parts sit apart from the content by a line. */
+	header.wp-block-template-part {
+		border-block-end: 1px solid var(--scheme-line);
+	}
+
+	footer.wp-block-template-part {
+		border-block-start: 1px solid var(--scheme-line);
+	}
+}
+

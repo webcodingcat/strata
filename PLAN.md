@@ -80,7 +80,7 @@ Each step is one or two commits; lint and build before each commit.
 1. [x] Project from wp-app-starter (theme, code checks, release workflow, browser tests); site `global` in wp-dev-env; this plan.
 2. [x] Base: Geist, `theme.json` (design tools of WordPress off: colors, type and spacing come from the theme), Tailwind tokens in `assets/styles.css`, templates `index`, `front-page`, `page` and the parts (interim content until step 4), allowed blocks (`src/Editor/AllowedBlocks.php`: blocks of the theme and of plugins, core blocks of the allowed list only).
 3. [x] Color schemes (`src/Scheme/`): settings group with identifiers, block support with editor control, CSS output with the derived tones, scheme editor with preview and contrast check. The support control loads once a block uses the support (step 4).
-4. [ ] Section and Group blocks with widths and schemes; header and footer parts from blocks; Copyright.
+4. [x] Section and Group blocks with widths and schemes; header and footer parts from blocks; Copyright. The legal links in the footer follow with the Paragraph (step 5).
 5. [ ] Content blocks: Heading, Paragraph, List, Image, Buttons, Columns, Quote, Separator, Details.
 6. [ ] Query, Post Template and Pagination; the blog templates `single`, `archive`, `search`, `404`.
 7. [ ] Browser tests (schemes, sections, legal links in the footer, editor), release test in wp-test-env.
