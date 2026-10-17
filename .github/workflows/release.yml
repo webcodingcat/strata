@@ -1,7 +1,7 @@
 # Release for a tag v<version> (= Version in style.css): builds the ZIP with
 # the release workflow of wp-app-framework, tests it in a plain WordPress and
 # attaches it to the GitHub release of the tag
-# (https://saijsaij.github.io/wp-app-framework/next/build-and-release/ci.html).
+# (https://webcodingcat.github.io/wp-app-framework/next/build-and-release/ci.html).
 name: Release
 
 on:
@@ -14,4 +14,4 @@ permissions:
 jobs:
   release:
     # Keep the ref at the framework version the lock file installs.
-    uses: SaijSaij/wp-app-framework/.github/workflows/consumer-release.yml@v0.19.0
+    uses: webcodingcat/wp-app-framework/.github/workflows/consumer-release.yml@v0.19.0

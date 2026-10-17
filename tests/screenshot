@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Takes the screenshot of the theme (screenshot.png) from the demo page, in a fresh instance of wp-test-env
-# (https://github.com/saijsaij/wp-test-env), checked out in ../framework/wp-test-env: tests/e2e/demo.html as a
+# (https://github.com/webcodingcat/wp-test-env), checked out in ../framework/wp-test-env: tests/e2e/demo.html as a
 # visitor sees it, 1200 × 900. Run it after changes of the design and commit screenshot.png.
 #
 # Usage: tests/screenshot

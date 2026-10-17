@@ -1,6 +1,6 @@
 # Plan – Strata
 
-Strata is a block theme for one-page sites (a single page plus imprint and privacy policy): the page is a stack of full-width sections, each with a color scheme and a content width. Built with [wp-app-framework](https://github.com/saijsaij/wp-app-framework). Goals: modern, flexible, easy to use.
+Strata is a block theme for one-page sites (a single page plus imprint and privacy policy): the page is a stack of full-width sections, each with a color scheme and a content width. Built with [wp-app-framework](https://github.com/webcodingcat/wp-app-framework). Goals: modern, flexible, easy to use.
 
 This file records the decisions and the steps. Tick a step when its commits are in; change a decision only together with the code.
 
@@ -93,7 +93,7 @@ Each step is one or two commits; lint and build before each commit.
 ## Dependencies
 
 - wp-app-framework 0.19.0 (`#[Identifier]`, settings scripts, `Repeater` and `#[Item]`, compact color controls, translations), required as `^0.19`; locally the package link of wp-dev-env runs the framework checkout.
-- Repository: https://github.com/saijsaij/strata
+- Repository: https://github.com/webcodingcat/strata
 
 ## Changes after the first version (2026-10-17)
 

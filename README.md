@@ -3,7 +3,7 @@
 A block theme for one-page sites built from full-width sections with color schemes.
 
 A block theme
-built with [wp-app-framework](https://saijsaij.github.io/wp-app-framework/): blocks, hooks and settings are PHP classes with attributes in `src/`, their markup is Twig, their styles Tailwind CSS.
+built with [wp-app-framework](https://webcodingcat.github.io/wp-app-framework/): blocks, hooks and settings are PHP classes with attributes in `src/`, their markup is Twig, their styles Tailwind CSS.
 
 - Slug (directory name): `strata`
 - Namespace: `strata`, the name in front of blocks (`strata/…`), REST routes, settings options, post types and tables; content refers to it, so keep it.
@@ -25,7 +25,7 @@ composer build-manifest   # checks attributes and services; writes nothing
 
 Put the directory into `wp-content/themes/` of a WordPress installation (or link it there) and activate it. The framework runs in development mode and builds its manifest itself; you only rebuild the scripts and styles.
 
-The [documentation](https://saijsaij.github.io/wp-app-framework/) explains blocks, the editor, settings, post types and everything else.
+The [documentation](https://webcodingcat.github.io/wp-app-framework/) explains blocks, the editor, settings, post types and everything else.
 
 ## Checks
 
@@ -47,10 +47,10 @@ Keep the framework version of the workflow (`consumer-release.yml@v0.17.3`) at t
 
 ## Browser tests
 
-The browser tests in `tests/e2e/` run with [wp-test-env](https://github.com/saijsaij/wp-test-env), which starts fresh WordPress instances in Docker. Check it out next to this project; the directory that contains both is its workspace:
+The browser tests in `tests/e2e/` run with [wp-test-env](https://github.com/webcodingcat/wp-test-env), which starts fresh WordPress instances in Docker. Check it out next to this project; the directory that contains both is its workspace:
 
 ```sh
-git clone https://github.com/saijsaij/wp-test-env.git ../wp-test-env
+git clone https://github.com/webcodingcat/wp-test-env.git ../wp-test-env
 cd ../wp-test-env
 bin/run ../strata/tests/dev.pools       # the checkout, in development mode
 bin/run ../strata/tests/release.pools   # the release ZIP
