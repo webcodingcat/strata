@@ -54,6 +54,37 @@ test.describe( 'Content blocks', () => {
 		}
 	} );
 
+	test( 'break a long word of a heading on a narrow screen instead of overflowing', async ( {
+		page,
+		requestUtils,
+	} ) => {
+		const post = await createPost( requestUtils, {
+			content: block(
+				'strata/section',
+				{},
+				block(
+					'strata/heading',
+					{ level: 1 },
+					'Donaudampfschifffahrtsgesellschaft'
+				)
+			),
+		} );
+		await page.setViewportSize( { width: 360, height: 800 } );
+		await page.goto( post.link );
+
+		const heading = page.locator( 'h1.strata-heading' );
+		await expect( heading ).toHaveCSS( 'hyphens', 'auto' );
+		const overflow = await heading.evaluate(
+			( element ) => element.scrollWidth - element.clientWidth
+		);
+		expect( overflow ).toBe( 0 );
+		expect(
+			await page.evaluate(
+				() => document.documentElement.scrollWidth - window.innerWidth
+			)
+		).toBe( 0 );
+	} );
+
 	test( 'show people in a grid, with phone and email as links where given', async ( {
 		page,
 		requestUtils,
