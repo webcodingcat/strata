@@ -42,6 +42,7 @@ This file records the decisions and the steps. Tick a step when its commits are 
 ### Typography
 
 - Font: **Geist** (Vercel, SIL Open Font License, variable 100–900), self-hosted in `assets/fonts/` and preloaded – no Google Fonts CDN (GDPR).
+- Two font tokens: `--font-body` (Geist) and `--font-display` (headings and the site title; the body font by default), with `--display-weight` and `--display-tracking` for the display font. A child theme sets them on `:root` outside the layers, so a display font with a single weight is not shown in a faux bold.
 
 ### Blocks
 

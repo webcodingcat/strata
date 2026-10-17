@@ -38,8 +38,17 @@
 	--color-current: currentColor;
 }
 
+/*
+ * Fonts: the body text and the display font of headings and the site title. A child theme sets its own on :root,
+ * outside the layers: --font-body and --font-display, and for a display font with a single weight --display-weight
+ * and --display-tracking (base layer below). Static, so the variables exist even where no utility uses them.
+ */
+@theme static {
+	--font-body: "Geist", ui-sans-serif, system-ui, sans-serif;
+	--font-display: var(--font-body);
+}
+
 @theme {
-	--font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
 
 	/* Fluid type: from a 360 px to a 1280 px wide viewport. */
 	--text-sm: 0.875rem;
@@ -64,6 +73,8 @@
 @layer base {
 	/* The page scheme until the settings print theirs; the default of the settings group. */
 	:root {
+		--display-weight: 600;
+		--display-tracking: -0.02em;
 		--scheme-bg: #ffffff;
 		--scheme-fg: #16181d;
 		--scheme-accent: #2f5bea;
@@ -93,7 +104,7 @@
 
 	body {
 		margin: 0;
-		font-family: var(--font-sans);
+		font-family: var(--font-body);
 		font-size: var(--text-base);
 		line-height: 1.6;
 		-webkit-font-smoothing: antialiased;
@@ -120,11 +131,17 @@
 
 /* Core blocks the theme keeps, and the box of a group with a color scheme. */
 @layer components {
+	/* Headings and the site title in the display font. */
+	.strata-heading,
+	.wp-block-site-title {
+		font-family: var(--font-display);
+		font-weight: var(--display-weight);
+		letter-spacing: var(--display-tracking);
+	}
+
 	.wp-block-site-title {
 		margin: 0;
 		font-size: var(--text-lg);
-		font-weight: 650;
-		letter-spacing: -0.01em;
 	}
 
 	.wp-block-site-title a {
