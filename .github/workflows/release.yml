@@ -14,4 +14,4 @@ permissions:
 jobs:
   release:
     # Keep the ref at the framework version the lock file installs.
-    uses: SaijSaij/wp-app-framework/.github/workflows/consumer-release.yml@v0.18.0
+    uses: SaijSaij/wp-app-framework/.github/workflows/consumer-release.yml@v0.18.1
