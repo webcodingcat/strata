@@ -1,0 +1,6 @@
+{% set wrapper = {class: 'strata-glossary-term scroll-mt-6 py-4'} %}
+{% if anchor %}{% set wrapper = wrapper|merge({id: anchor}) %}{% endif %}
+<div {{ block_wrapper_attributes(wrapper) }}>
+    <dt class="strata-glossary-term__term text-xl leading-tight"{{ field('term') }}>{{ attrs.term }}</dt>
+    <dd class="m-0 mt-1.5 text-ink-soft"{{ field('explanation') }}>{{ attrs.explanation|raw }}</dd>
+</div>

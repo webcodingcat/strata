@@ -1,0 +1,2 @@
+{# As many columns as fit with at least 14rem each; boxes get the raised background of the scheme. #}
+<div {{ block_wrapper_attributes({class: 'strata-facts grid grid-cols-[repeat(auto-fit,minmax(min(14rem,100%),1fr))] gap-6' ~ (attrs.boxed ? ' *:rounded-control *:bg-canvas-soft *:p-5' : '')}) }}{{ inner_blocks() }}>{{ content|raw }}</div>

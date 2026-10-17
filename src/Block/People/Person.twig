@@ -1,0 +1,19 @@
+{% set contact = 'w-fit text-sm text-ink no-underline hover:text-accent' %}
+<figure {{ block_wrapper_attributes({class: 'strata-person m-0 flex flex-col gap-3'}) }}>
+    {% if attrs.photoId or is_editor() %}
+        <div class="strata-person__photo"{{ field('photoId') }}>{{ wp_attachment_image(attrs.photoId, 'medium_large', {class: 'block aspect-3/4 h-auto w-full rounded-control object-cover'}) }}</div>
+    {% endif %}
+    <figcaption class="flex flex-col gap-1">
+        <span class="strata-person__name text-xl leading-tight"{{ field('name') }}>{{ attrs.name }}</span>
+        {% if attrs.role or is_editor() %}
+            <span class="text-sm text-ink-soft"{{ field('role') }}>{{ attrs.role }}</span>
+        {% endif %}
+        {% if is_editor() %}
+            <span class="{{ contact }}"{{ field('phone') }}>{{ attrs.phone }}</span>
+            <span class="{{ contact }}"{{ field('email') }}>{{ attrs.email }}</span>
+        {% else %}
+            {% if attrs.phone %}<a class="{{ contact }}" href="tel:{{ tel }}">{{ attrs.phone }}</a>{% endif %}
+            {% if attrs.email %}<a class="{{ contact }} break-all" href="mailto:{{ attrs.email }}">{{ attrs.email }}</a>{% endif %}
+        {% endif %}
+    </figcaption>
+</figure>

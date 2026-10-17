@@ -68,6 +68,9 @@ Own blocks in version 1 (namespace `strata`):
 | Separator | |
 | Details | summary and inner blocks |
 | Navigation / Navigation link | links to sections (free URLs such as `#about`, `/#about` from other pages) and pages; a row from `md` on, below a menu button that opens a full-window panel (popover: no script needed to open and close it; the view script closes it when a link is followed) |
+| People / Person | a grid of people (2–4 per row from `md` on, 2 below): portrait photo, name in the display font, role, phone and email as `tel:`/`mailto:` links; empty fields leave nothing on the front end |
+| Facts / Fact | facts side by side as far as they fit (at least 14rem each), optionally as boxes: icon (a small set drawn after Lucide, ISC), label, value (multi-line), the value linked when a link is given |
+| Glossary / Glossary term | terms in the order given, the explanation in the post content; an index A–Z (and `#`) links each letter to its first term, the anchor of a term is its slug |
 | Copyright | "© {year} {text}": the year rendered on the server, optional start year ("© 2019–2026"), text edited in the canvas, the site title when empty |
 No blog, so no query blocks (they were built in step 6 and removed again); no comments in version 1.
 
@@ -100,3 +103,4 @@ Each step is one or two commits; lint and build before each commit.
 - All schemes choosable, shown as defined; columns with a boxed column line up their content.
 - In the framework: compact color controls side by side, settings as headings (wp-app-framework `main`).
 - Font tokens `--font-body` and `--font-display` (see Typography) and the Navigation block.
+- Blocks People, Facts and Glossary.

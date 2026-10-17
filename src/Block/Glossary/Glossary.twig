@@ -1,0 +1,14 @@
+<div {{ block_wrapper_attributes({class: 'strata-glossary flex flex-col gap-6'}) }}>
+    {% if letters %}
+        <nav class="strata-glossary__index flex flex-wrap gap-1" aria-label="{{ attrs.indexLabel }}">
+            {% for item in letters %}
+                {% if item.anchor %}
+                    <a class="inline-flex size-9 items-center justify-center rounded-control font-semibold text-ink no-underline hover:bg-accent hover:text-canvas" href="#{{ item.anchor }}">{{ item.letter }}</a>
+                {% else %}
+                    <span class="inline-flex size-9 items-center justify-center text-ink-faint">{{ item.letter }}</span>
+                {% endif %}
+            {% endfor %}
+        </nav>
+    {% endif %}
+    <dl class="strata-glossary__terms m-0 flex flex-col divide-y divide-line"{{ inner_blocks() }}>{{ content|raw }}</dl>
+</div>

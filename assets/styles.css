@@ -131,9 +131,11 @@
 
 /* Core blocks the theme keeps, and the box of a group with a color scheme. */
 @layer components {
-	/* Headings and the site title in the display font. */
+	/* Headings, the site title, names of people and terms of a glossary in the display font. */
 	.strata-heading,
-	.wp-block-site-title {
+	.wp-block-site-title,
+	.strata-person__name,
+	.strata-glossary-term__term {
 		font-family: var(--font-display);
 		font-weight: var(--display-weight);
 		letter-spacing: var(--display-tracking);

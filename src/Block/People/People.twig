@@ -1,0 +1,2 @@
+{% set columns = {2: 'sm:grid-cols-2', 3: 'grid-cols-2 md:grid-cols-3', 4: 'grid-cols-2 md:grid-cols-4'} %}
+<div {{ block_wrapper_attributes({class: 'strata-people grid gap-x-6 gap-y-10 ' ~ columns[attrs.columns.value]}) }}{{ inner_blocks() }}>{{ content|raw }}</div>

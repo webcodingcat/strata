@@ -205,6 +205,25 @@ test.describe( 'Editor', () => {
 					{},
 					block( 'strata/navigation-link', { label: 'Link' } )
 				),
+				block(
+					'strata/people',
+					{},
+					block( 'strata/person', { name: 'Person' } )
+				),
+				block(
+					'strata/facts',
+					{},
+					block( 'strata/fact', { label: 'Fact', value: 'Value' } )
+				),
+				block(
+					'strata/glossary',
+					{},
+					block(
+						'strata/glossary-term',
+						{ term: 'Term' },
+						'Explanation'
+					)
+				),
 			].join( '\n' )
 		);
 		const post = await createPost( requestUtils, {
@@ -226,6 +245,9 @@ test.describe( 'Editor', () => {
 			'.strata-details',
 			'.strata-copyright',
 			'.strata-navigation-link',
+			'.strata-person',
+			'.strata-fact',
+			'.strata-glossary-term',
 		] ) {
 			await expect( canvas.locator( selector ).first() ).toBeVisible();
 		}
