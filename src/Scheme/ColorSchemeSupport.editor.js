@@ -1,11 +1,12 @@
 /**
  * The control of the color scheme of sections and groups: one swatch per scheme besides the page scheme, and
- * "Around" for none, which keeps the scheme around the block. The schemes are view data of SchemeStyles.
+ * "Around" for none, which keeps the scheme around the block – its swatch shows the page scheme, dashed. The
+ * schemes are view data of SchemeStyles.
  */
 import { getData, registerSupportControl } from '@saij/wp-app-framework';
 import { BaseControl, Button } from '@wordpress/components';
 
-function Swatch( { scheme, page } ) {
+function Swatch( { scheme, page, dashed = false } ) {
 	const color = ( key ) => scheme[ key ] || page?.[ key ] || 'transparent';
 	return (
 		<span
@@ -18,7 +19,7 @@ function Swatch( { scheme, page } ) {
 				height: '28px',
 				marginInlineEnd: '8px',
 				borderRadius: '50%',
-				border: '2px solid',
+				border: `2px ${ dashed ? 'dashed' : 'solid' }`,
 				fontSize: '11px',
 				fontWeight: 600,
 				background: color( 'background' ),
@@ -49,6 +50,7 @@ registerSupportControl( 'colorScheme', ( { value, onChange } ) => {
 					isPressed={ ! value }
 					onClick={ () => onChange( '' ) }
 				>
+					<Swatch scheme={ {} } page={ page } dashed />
 					Around
 				</Button>
 				{ choices.map( ( scheme ) => (

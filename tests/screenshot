@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Takes the screenshot of the theme (screenshot.png) from the demo page, in a fresh instance of wp-test-env
+# (https://github.com/saijsaij/wp-test-env), checked out in ../framework/wp-test-env: tests/e2e/demo.html as a
+# visitor sees it, 1200 × 900. Run it after changes of the design and commit screenshot.png.
+#
+# Usage: tests/screenshot
+set -euo pipefail
+
+theme="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+workspace="$(dirname "${theme}")"
+env="${workspace}/framework/wp-test-env"
+[[ -x "${env}/bin/up" ]] || { echo "ERROR: wp-test-env is not checked out at ${env}." >&2; exit 1; }
+slug="$(basename "${theme}")"
+instance="${slug}-screenshot"
+export WP_TEST_ENV_WORKSPACE="${workspace}"
+
+"${env}/bin/prepare" "${slug}"
+"${env}/bin/up" "${instance}" --theme "${slug}" --activate "${slug}"
+trap '"${env}/bin/down" "${instance}" >/dev/null' EXIT
+"${env}/bin/e2e" --instances "${instance}" --project "${slug}" --results "${instance}" -- specs/screenshot.spec.js
+cp "${env}/results/${instance}/screenshot.png" "${theme}/screenshot.png"
+echo "Wrote ${theme}/screenshot.png"
