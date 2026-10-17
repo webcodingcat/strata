@@ -200,6 +200,11 @@ test.describe( 'Editor', () => {
 					{ layout: 'row' },
 					block( 'strata/copyright' )
 				),
+				block(
+					'strata/navigation',
+					{},
+					block( 'strata/navigation-link', { label: 'Link' } )
+				),
 			].join( '\n' )
 		);
 		const post = await createPost( requestUtils, {
@@ -220,6 +225,7 @@ test.describe( 'Editor', () => {
 			'hr.strata-separator',
 			'.strata-details',
 			'.strata-copyright',
+			'.strata-navigation-link',
 		] ) {
 			await expect( canvas.locator( selector ).first() ).toBeVisible();
 		}

@@ -1,0 +1,18 @@
+{% set justify = {start: 'md:justify-start', center: 'md:justify-center', end: 'md:justify-end'} %}
+{% set list = 'strata-navigation__list m-0 flex list-none flex-wrap gap-x-6 gap-y-2 p-0 ' ~ justify[attrs.justify.value] %}
+<nav {{ block_wrapper_attributes({class: 'strata-navigation', 'aria-label': attrs.label}) }}>
+{% if is_editor() %}
+    <ul class="{{ list }}"{{ inner_blocks() }}>{{ content|raw }}</ul>
+{% else %}
+    <button type="button" class="strata-navigation__toggle inline-flex md:hidden cursor-pointer items-center gap-2 rounded-control border border-line-strong bg-transparent px-3 py-2 font-semibold text-ink" popovertarget="{{ panelId }}">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+        {{ attrs.menuLabel }}
+    </button>
+    <div id="{{ panelId }}" class="strata-navigation__panel" popover>
+        <button type="button" class="strata-navigation__close inline-flex md:hidden cursor-pointer self-end rounded-control border-0 bg-transparent p-2 text-ink" popovertarget="{{ panelId }}" popovertargetaction="hide" aria-label="{{ attrs.closeLabel }}">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+        </button>
+        <ul class="{{ list }}">{{ content|raw }}</ul>
+    </div>
+{% endif %}
+</nav>

@@ -12,7 +12,7 @@ This file records the decisions and the steps. Tick a step when its commits are 
 - The top level of a page holds sections only: every other block of the theme can only be inserted inside a section (`ancestor`), the core blocks of the header as well.
 - A one-page site has no blog and no search: the post type `post` with categories and tags is hidden in the backend, the REST API and the front end; a search answers with the 404 page. When the site switches to the theme without a static front page, the first published page becomes it, or a new page "Home" (`src/Site/FrontPage.php`).
 - Header and footer consist of single blocks and are edited in the site editor; the theme ships a sensible default:
-  - header: Section › Group (row) › `core/site-title` + `core/site-tagline`; no navigation;
+  - header: Section › Group (row) › `core/site-title` + `core/site-tagline`; a Navigation can be added (not in the default header, which has no sections to link to);
   - footer: Section › Group (row) › Paragraph with the links of the legal pages (chosen by the user) + Copyright.
 - No settings for header and footer content.
 
@@ -67,6 +67,7 @@ Own blocks in version 1 (namespace `strata`):
 | Quote | text and citation |
 | Separator | |
 | Details | summary and inner blocks |
+| Navigation / Navigation link | links to sections (free URLs such as `#about`, `/#about` from other pages) and pages; a row from `md` on, below a menu button that opens a full-window panel (popover: no script needed to open and close it; the view script closes it when a link is followed) |
 | Copyright | "© {year} {text}": the year rendered on the server, optional start year ("© 2019–2026"), text edited in the canvas, the site title when empty |
 No blog, so no query blocks (they were built in step 6 and removed again); no comments in version 1.
 
@@ -98,4 +99,4 @@ Each step is one or two commits; lint and build before each commit.
 - Sections only at the top level; the element of a section removed (always `<section>`).
 - All schemes choosable, shown as defined; columns with a boxed column line up their content.
 - In the framework: compact color controls side by side, settings as headings (wp-app-framework `main`).
-
+- Font tokens `--font-body` and `--font-display` (see Typography) and the Navigation block.

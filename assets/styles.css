@@ -172,6 +172,46 @@
 		border-radius: var(--radius-control);
 	}
 
+	/*
+	 * Navigation: below md the links sit in a panel over the whole window (a popover; the browser hides it until
+	 * the menu button opens it), from md on the panel dissolves and the links form a row.
+	 */
+	.strata-navigation__panel {
+		inset: 0;
+		width: 100%;
+		max-width: none;
+		height: 100%;
+		max-height: none;
+		margin: 0;
+		border: 0;
+		padding: var(--spacing-gutter);
+		background-color: var(--scheme-bg);
+		color: var(--scheme-fg);
+	}
+
+	.strata-navigation__panel:popover-open {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.strata-navigation__panel .strata-navigation__list {
+		flex-direction: column;
+		font-size: var(--text-2xl);
+	}
+
+	/* The buttons hide with md:hidden in the template; utilities win over this layer. */
+	@media (width >= 48rem) {
+		.strata-navigation__panel {
+			display: contents;
+		}
+
+		.strata-navigation__panel .strata-navigation__list {
+			flex-direction: row;
+			font-size: inherit;
+		}
+	}
+
 	/* The header and footer parts sit apart from the content by a line. */
 	header.wp-block-template-part {
 		border-block-end: 1px solid var(--scheme-line);
