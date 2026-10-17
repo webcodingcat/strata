@@ -118,7 +118,11 @@ test.describe( 'Editor', () => {
 				block(
 					'strata/list',
 					{},
-					block( 'strata/list-item', {}, 'Item' )
+					block(
+						'strata/list-item',
+						{},
+						block( 'strata/paragraph', {}, 'Item' )
+					)
 				),
 				block( 'strata/image', { caption: 'Caption' } ),
 				block(

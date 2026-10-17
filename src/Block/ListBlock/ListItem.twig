@@ -1,1 +1,1 @@
-<li {{ block_wrapper_attributes({class: 'strata-list-item ps-1'}) }}{{ field('text') }}>{{ attrs.text|raw }}</li>
+<li {{ block_wrapper_attributes({class: 'strata-list-item ps-1'}) }}{{ inner_blocks() }}>{{ content|raw }}</li>

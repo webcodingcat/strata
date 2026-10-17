@@ -12,7 +12,7 @@ use Saij\WpAppFramework\Block\TemplateBlock;
 use Saij\WpAppFramework\Twig\TemplateRenderer;
 
 /**
- * A bulleted or numbered list of list items.
+ * A bulleted or numbered list of list items; an item holds a paragraph and, for a nested list, a list.
  */
 #[Block('list', title: 'List', category: Category::Content, icon: 'editor-ul', excerptWrapper: true)]
 #[Supports(anchor: true)]

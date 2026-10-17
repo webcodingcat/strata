@@ -58,7 +58,7 @@ Own blocks in version 1 (namespace `strata`):
 | Columns / Column | 2–4 columns, stacked on small screens |
 | Heading | text in the post content (`#[RichText(postContent: true)]`), level 1–4 |
 | Paragraph | text in the post content |
-| List / List item | items as blocks with their text in the post content; no nested lists in version 1 (a block cannot have inner blocks and a post content field) |
+| List / List item | a list item has no text of its own: its content are blocks – a Paragraph for the text (in the post content), a List inside for a nested list |
 | Image | attachment, caption, optional link |
 | Buttons / Button | link (`Link`), style primary/secondary |
 | Quote | text and citation |

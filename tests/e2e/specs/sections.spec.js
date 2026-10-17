@@ -139,6 +139,45 @@ test.describe( 'Sections', () => {
 		).toBe( 390 );
 	} );
 
+	test( 'hold lists whose items are paragraphs and nested lists', async ( {
+		page,
+		requestUtils,
+	} ) => {
+		const item = ( ...blocks ) =>
+			block( 'strata/list-item', {}, blocks.join( '\n' ) );
+		const post = await createPost( requestUtils, {
+			content: block(
+				'strata/section',
+				{},
+				block(
+					'strata/list',
+					{},
+					[
+						item( paragraph( 'First' ) ),
+						item(
+							paragraph( 'Second' ),
+							block(
+								'strata/list',
+								{ ordered: true },
+								item( paragraph( 'Nested' ) )
+							)
+						),
+					].join( '\n' )
+				)
+			),
+		} );
+		await page.goto( post.link );
+
+		const outer = page.locator( 'main ul.strata-list' );
+		await expect( outer.locator( ':scope > li > p' ) ).toHaveText( [
+			'First',
+			'Second',
+		] );
+		await expect(
+			outer.locator( ':scope > li > ol.strata-list > li > p' )
+		).toHaveText( 'Nested' );
+	} );
+
 	test( 'sit between the header with the site title and the footer with links and copyright', async ( {
 		page,
 		requestUtils,
