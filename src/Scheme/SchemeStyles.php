@@ -9,7 +9,7 @@ use Saij\WpAppFramework\View\ViewData;
 
 /**
  * Prints the color schemes as CSS variables after the stylesheet of the theme (front end and editor canvas): the
- * page scheme on :root, each other scheme on its class. The tones derive from them in assets/styles.css. The colors
+ * page scheme on :root, each scheme on its class (the page scheme too, for blocks inside other schemes). The tones derive from them in assets/styles.css. The colors
  * and identifiers are checked by their patterns (#[Color], #[Identifier]), so they are safe in CSS.
  *
  * In the block editor the schemes are view data for the control of the block support (ColorSchemeSupport.editor.js).

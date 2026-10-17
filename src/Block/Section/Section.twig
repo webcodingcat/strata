@@ -1,5 +1,5 @@
 {% set widths = {narrow: 'max-w-narrow', normal: 'max-w-normal', wide: 'max-w-wide'} %}
 {% set spacings = {none: 'py-0', compact: 'py-6', normal: 'py-section', spacious: 'py-[calc(var(--spacing-section)*1.5)]'} %}
-<{{ attrs.element.value }} {{ block_wrapper_attributes({class: 'strata-section w-full px-gutter ' ~ spacings[attrs.spacing.value]}) }}>
+<section {{ block_wrapper_attributes({class: 'strata-section w-full px-gutter ' ~ spacings[attrs.spacing.value]}) }}>
     <div class="strata-section__content mx-auto flex w-full flex-col gap-flow {{ widths[attrs.width.value] }}"{{ inner_blocks() }}>{{ content|raw }}</div>
-</{{ attrs.element.value }}>
+</section>

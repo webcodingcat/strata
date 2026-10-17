@@ -8,10 +8,10 @@ use Saij\WpAppFramework\Setting\SettingsGroup;
 use Saij\WpAppFramework\Value\ListOf;
 
 /**
- * The color schemes of the site: the first one colors the whole page, the others can be chosen for sections and
- * groups (block support ColorSchemeSupport). Option strata_color_schemes.
+ * The color schemes of the site: the first one colors the whole page; sections, groups and columns can choose any of
+ * them (block support ColorSchemeSupport). Option strata_color_schemes.
  */
-#[SettingsGroup('color_schemes', title: 'Color schemes', description: 'The first scheme colors the whole page; sections and groups can use the others.')]
+#[SettingsGroup('color_schemes', title: 'Color schemes', description: 'The first scheme colors the whole page; sections, groups and columns can choose any of them.')]
 final readonly class ColorSchemes
 {
     /**
@@ -35,15 +35,12 @@ final readonly class ColorSchemes
     }
 
     /**
-     * The schemes sections and groups can choose: all but the first.
+     * The schemes blocks can choose: all with an identifier (a scheme gets one when the group is saved).
      *
      * @return list<ColorScheme>
      */
     public function choices(): array
     {
-        return array_values(array_filter(
-            array_slice($this->schemes, 1),
-            static fn(ColorScheme $scheme): bool => $scheme->id !== '',
-        ));
+        return array_values(array_filter($this->schemes, static fn(ColorScheme $scheme): bool => $scheme->id !== ''));
     }
 }

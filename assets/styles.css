@@ -147,6 +147,8 @@
 		margin-block-start: 0.375rem;
 	}
 
+	/* In columns with a boxed column, every column gets the padding of the box, so their content lines up. */
+	.strata-columns:has(> .strata-column.has-scheme) > .strata-column,
 	.strata-group.has-scheme,
 	.strata-column.has-scheme {
 		padding: clamp(1.25rem, 0.9rem + 1.5vw, 2rem);
@@ -161,101 +163,6 @@
 	footer.wp-block-template-part {
 		border-block-start: 1px solid var(--scheme-line);
 	}
-}
-
-/*
- * Core post blocks in templates and post templates, the pagination, and the content of a post inside a section.
- * Outside the layers: WordPress' styles of core blocks are unlayered and would win over layered rules.
- */
-.strata-section .wp-block-post-content {
-	display: flex;
-	flex-direction: column;
-	gap: var(--spacing-flow);
-}
-
-.wp-block-post-title {
-	margin: 0;
-	font-size: var(--text-2xl);
-	font-weight: 600;
-	line-height: 1.2;
-	letter-spacing: -0.015em;
-}
-
-h1.wp-block-post-title {
-	font-size: var(--text-4xl);
-}
-
-.wp-block-post-title a {
-	color: inherit;
-	text-decoration: none;
-}
-
-.wp-block-post-title a:hover {
-	color: var(--scheme-accent);
-}
-
-.wp-block-post-date,
-.wp-block-post-terms,
-.wp-block-post-author-name {
-	font-size: var(--text-sm);
-	color: var(--scheme-fg-soft);
-}
-
-.wp-block-post-excerpt__excerpt {
-	margin: 0;
-}
-
-.wp-block-post-featured-image img {
-	display: block;
-	width: 100%;
-	height: auto;
-	border-radius: var(--radius-control);
-}
-
-.wp-block-query-title {
-	margin: 0;
-	font-size: var(--text-3xl);
-	font-weight: 600;
-	letter-spacing: -0.015em;
-}
-
-.strata-pagination .page-numbers {
-	padding: 0.375rem 0.75rem;
-	border: 1px solid var(--scheme-line);
-	border-radius: var(--radius-control);
-	color: var(--scheme-fg);
-	text-decoration: none;
-}
-
-.strata-pagination .page-numbers.current {
-	border-color: var(--scheme-accent);
-	color: var(--scheme-accent);
-}
-
-.wp-block-search__inside-wrapper {
-	display: flex;
-	gap: 0.5rem;
-}
-
-.wp-block-search__input {
-	flex: 1;
-	padding: 0.5rem 0.75rem;
-	border: 1px solid var(--scheme-line-strong);
-	border-radius: var(--radius-control);
-	background: var(--scheme-bg);
-	color: var(--scheme-fg);
-	font: inherit;
-}
-
-.wp-block-search__button {
-	padding: 0.5rem 1rem;
-	border: 0;
-	border-radius: var(--radius-control);
-	background: var(--scheme-accent);
-	color: var(--scheme-bg);
-	font: inherit;
-	font-weight: 600;
-	cursor: pointer;
 }
 
 /* The title of a post or page in the editor canvas: with the space and width of the content. */

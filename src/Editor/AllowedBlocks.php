@@ -12,6 +12,9 @@ use WP_Block_Type_Registry;
  * The blocks editors can insert: the blocks of the theme and of plugins, and of the core blocks only those that store
  * no markup in the post content and fit the theme (PLAN.md, Blocks). The theme replaces the others with blocks of its
  * own.
+ *
+ * Every block of the theme besides the section can only be inserted inside a section (`ancestor`), so the top level
+ * of a page holds sections only; the core blocks kept for the header get the same rule.
  */
 final class AllowedBlocks
 {
@@ -20,20 +23,14 @@ final class AllowedBlocks
         CoreBlock::Block,
         CoreBlock::Pattern,
         CoreBlock::PostContent,
-        CoreBlock::PostDate,
-        CoreBlock::PostExcerpt,
-        CoreBlock::PostFeaturedImage,
-        CoreBlock::PostAuthorName,
-        CoreBlock::PostTerms,
-        CoreBlock::PostTitle,
-        CoreBlock::QueryTitle,
-        CoreBlock::ReadMore,
-        CoreBlock::Search,
         CoreBlock::SiteLogo,
         CoreBlock::SiteTagline,
         CoreBlock::SiteTitle,
         CoreBlock::TemplatePart,
     ];
+
+    /** Of those, the blocks that belong inside a section, like the blocks of the theme. */
+    private const array IN_SECTION = [CoreBlock::SiteLogo, CoreBlock::SiteTagline, CoreBlock::SiteTitle];
 
     /**
      * @param bool|list<string> $allowed What WordPress or other code allows: true for all blocks.
@@ -51,5 +48,21 @@ final class AllowedBlocks
             $names,
             static fn(string $name): bool => !str_starts_with($name, 'core/') || in_array($name, $core, true),
         ));
+    }
+
+    /**
+     * @param array<string, mixed> $args
+     * @return array<string, mixed>
+     */
+    #[Hook('register_block_type_args')]
+    public function inSection(array $args, string $name): array
+    {
+        foreach (self::IN_SECTION as $block) {
+            if ($block->value === $name) {
+                $args['ancestor'] = ['strata/section'];
+            }
+        }
+
+        return $args;
     }
 }

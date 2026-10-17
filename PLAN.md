@@ -8,7 +8,9 @@ This file records the decisions and the steps. Tick a step when its commits are 
 
 ### Page structure
 
-- `templates/*.html` are full site editing templates: `<header>` and `<footer>` are template parts (`tagName` header/footer), `<main>` is `core/post-content` with `tagName: main` (allowed by WordPress: `wp-includes/blocks/post-content.php:65`) and the default layout, so sections are direct children of `<main>` and WordPress does not constrain their width.
+- `templates/*.html` are full site editing templates: `<header>` and `<footer>` are template parts (`tagName` header/footer), `<main>` is `core/post-content` with `tagName: main` (allowed by WordPress: `wp-includes/blocks/post-content.php:65`) and the default layout, so sections are direct children of `<main>` and WordPress does not constrain their width. The 404 page is the template part `not-found` as `<main>`.
+- The top level of a page holds sections only: every other block of the theme can only be inserted inside a section (`ancestor`), the core blocks of the header as well.
+- A one-page site has no blog and no search: the post type `post` with categories and tags is hidden in the backend, the REST API and the front end; a search answers with the 404 page.
 - Header and footer consist of single blocks and are edited in the site editor; the theme ships a sensible default:
   - header: Section › Group (row) › `core/site-title` + `core/site-tagline`; no navigation;
   - footer: Section › Group (row) › Paragraph with the links of the legal pages (chosen by the user) + Copyright.
@@ -16,14 +18,14 @@ This file records the decisions and the steps. Tick a step when its commits are 
 
 ### Sections
 
-- A section always spans the whole browser width; its content is limited to one of three widths: `narrow`, `normal`, `wide` (enum attribute).
+- A section is always a `<section>` and spans the whole browser width; its content is limited to one of three widths: `narrow`, `normal`, `wide` (enum attribute).
 - A section has a color scheme (block support `colorScheme`) and an anchor.
 - Responsive: fluid type and spacing with `clamp()`, columns stack below `md`.
 
 ### Colors
 
 - Three colors per scheme: background, foreground, accent. Text on the accent uses the background color.
-- Color schemes are a settings group (list of schemes): each scheme has an identifier (`#[Identifier]`, generated once, never shown), a name and the three colors (`#[Color]`). The first scheme is the scheme of the whole page; the others can be chosen per section (and group).
+- Color schemes are a settings group (list of schemes): each scheme has an identifier (`#[Identifier]`, generated once, never shown), a name and the three colors (`#[Color]`). The first scheme is the scheme of the whole page; sections, groups and columns can choose any scheme, shown as defined (name and swatch).
 - The block support stores the identifier; a section whose scheme no longer exists gets the page scheme. Class `scheme-{id}`.
 - The theme prints the schemes as CSS variables (`--scheme-bg`, `--scheme-fg`, `--scheme-accent`) on `:root` and per scheme class, on `enqueue_block_assets` (front end and editor canvas).
 - Derived tones with `color-mix()` towards the other scheme color (so they work in light and dark schemes), declared on `:root` and every scheme class so they recompute per section. Tailwind tokens (default palette reset with `--color-*: initial`):
@@ -47,7 +49,7 @@ Core blocks that store markup in the post content contradict the framework (no m
 
 - **Store their own markup (disabled):** paragraph, heading, list, list-item, quote, pullquote, verse, preformatted, code, table, image, gallery, cover, media-text, file, audio, video, embed, playlist, group, columns, column, buttons, button, separator, spacer, details, accordion (all four), tabs (all four), social-links, html, freeform, more, nextpage, math, text-columns, query, comments, terms-query.
 - **Store only their inner blocks:** post-template, comment-template, term-template, query-pagination, query-no-results, comments-pagination, navigation, navigation-link, navigation-submenu, home-link – of no use without the disabled parents, disabled as well.
-- **Store nothing (allowed where useful):** site-title, site-tagline, site-logo, post-content, template-part, pattern, post-title, post-date, post-excerpt, post-featured-image, post-terms, post-author-name, read-more, query-title, search.
+- **Store nothing (allowed where useful):** site-title, site-tagline, site-logo, post-content, template-part, pattern, block (synced patterns). Without a blog, the post blocks, query title and search are not offered.
 
 Own blocks in version 1 (namespace `strata`):
 
@@ -65,13 +67,11 @@ Own blocks in version 1 (namespace `strata`):
 | Separator | |
 | Details | summary and inner blocks |
 | Copyright | "© {year} {text}": the year rendered on the server, optional start year ("© 2019–2026"), text edited in the canvas, the site title when empty |
-| Query / Post Template / Pagination | own query of posts (main query in archives and search) with `Repeater` and `#[Item]`; post template with the dynamic post blocks and own blocks |
-
-No comments in version 1.
+No blog, so no query blocks (they were built in step 6 and removed again); no comments in version 1.
 
 ### Templates
 
-`index`, `page`, `single`, `archive`, `search`, `404`; parts `header` and `footer`.
+`index` and `page` (the same), `404`; parts `header`, `footer` and `not-found`.
 
 ## Steps
 
@@ -89,3 +89,12 @@ Each step is one or two commits; lint and build before each commit.
 
 - wp-app-framework 0.18 (`#[Identifier]`, settings scripts, `Repeater` and `#[Item]`), required as `^0.18`; locally the package link of wp-dev-env runs the framework checkout.
 - Repository: https://github.com/saijsaij/strata
+
+## Changes after the first version (2026-10-17)
+
+- Screenshot of the theme: `tests/screenshot` (see CLAUDE.md).
+- No blog, no search, no archives (decision above); Query, Post Template, Pagination and the templates `single`, `archive`, `search` removed.
+- Sections only at the top level; the element of a section removed (always `<section>`).
+- All schemes choosable, shown as defined; columns with a boxed column line up their content.
+- In the framework: compact color controls side by side, settings as headings (wp-app-framework `main`).
+

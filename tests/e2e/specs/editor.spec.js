@@ -17,42 +17,75 @@ test.describe( 'Editor', () => {
 		await cleanUp( requestUtils );
 	} );
 
-	test( 'offers the blocks of the theme instead of core blocks that store markup', async ( {
+	test( 'offers sections at the top level and the blocks of the theme inside them', async ( {
 		admin,
 		editor,
 		page,
 		requestUtils,
 	} ) => {
-		const post = await createPost( requestUtils, { status: 'draft' } );
+		const post = await createPost( requestUtils, {
+			status: 'draft',
+			content: block(
+				'strata/section',
+				{},
+				block( 'strata/paragraph', {}, 'Inside' )
+			),
+		} );
 		await openEditor( { admin, editor }, post.id );
+		await expect(
+			editor.canvas.locator( '[data-type="strata/section"]' )
+		).toBeVisible();
 
-		const insertable = await page.evaluate( () =>
-			Object.fromEntries(
-				[
-					'core/paragraph',
-					'core/heading',
-					'core/group',
-					'core/image',
-					'core/query',
-					'core/site-title',
-					'strata/paragraph',
-					'strata/section',
-				].map( ( name ) => [
-					name,
-					window.wp.data
-						.select( 'core/block-editor' )
-						.canInsertBlockType( name ),
-				] )
-			)
-		);
-		expect( insertable ).toEqual( {
+		const insertable = await page.evaluate( () => {
+			const store = window.wp.data.select( 'core/block-editor' );
+			const section = store.getBlocks()[ 0 ].clientId;
+			const names = [
+				'core/paragraph',
+				'core/heading',
+				'core/group',
+				'core/query',
+				'core/search',
+				'core/site-title',
+				'strata/paragraph',
+				'strata/columns',
+				'strata/section',
+			];
+			return {
+				top: Object.fromEntries(
+					names.map( ( name ) => [
+						name,
+						store.canInsertBlockType( name ),
+					] )
+				),
+				section: Object.fromEntries(
+					names.map( ( name ) => [
+						name,
+						store.canInsertBlockType( name, section ),
+					] )
+				),
+			};
+		} );
+		// The top level holds sections only; core blocks that store markup are not offered at all.
+		expect( insertable.top ).toEqual( {
 			'core/paragraph': false,
 			'core/heading': false,
 			'core/group': false,
-			'core/image': false,
 			'core/query': false,
+			'core/search': false,
+			'core/site-title': false,
+			'strata/paragraph': false,
+			'strata/columns': false,
+			'strata/section': true,
+		} );
+		expect( insertable.section ).toEqual( {
+			'core/paragraph': false,
+			'core/heading': false,
+			'core/group': false,
+			'core/query': false,
+			'core/search': false,
 			'core/site-title': true,
 			'strata/paragraph': true,
+			'strata/columns': true,
 			'strata/section': true,
 		} );
 	} );
@@ -83,6 +116,15 @@ test.describe( 'Editor', () => {
 			.getByRole( 'region', { name: 'Editor settings' } )
 			.getByRole( 'tab', { name: 'Styles' } )
 			.click();
+		// Every scheme as it is defined; without a scheme of its own the page scheme is chosen.
+		await expect( page.getByRole( 'radio' ) ).toHaveText( [
+			'AaPage',
+			'AaSoft',
+			'AaDark',
+		] );
+		await expect(
+			page.getByRole( 'radio', { name: 'Page' } )
+		).toHaveAttribute( 'aria-checked', 'true' );
 		await page.getByRole( 'radio', { name: 'Dark' } ).click();
 		await expect( section ).toHaveClass( /scheme-c3f5a7d9/ );
 		await expect( section ).toHaveCSS(

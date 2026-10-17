@@ -7,8 +7,8 @@ namespace Saij\Strata\Scheme;
 use Saij\WpAppFramework\Block\Support\BlockSupport;
 
 /**
- * The color scheme of a section or group: the identifier of one of the schemes besides the page scheme. Without one,
- * or if the scheme no longer exists, the block keeps the scheme around it.
+ * The color scheme of a section, group or column: the identifier of one of the schemes. Without one, or if the
+ * scheme no longer exists, the block keeps the scheme around it.
  */
 #[BlockSupport('colorScheme', label: 'Color scheme')]
 final readonly class ColorSchemeSupport

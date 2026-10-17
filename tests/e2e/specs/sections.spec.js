@@ -99,6 +99,38 @@ test.describe( 'Sections', () => {
 		).toBe( 1280 );
 	} );
 
+	test( 'line up the content of columns when one of them is a box', async ( {
+		page,
+		requestUtils,
+	} ) => {
+		const column = ( attributes, text ) =>
+			block(
+				'strata/column',
+				attributes,
+				block( 'strata/heading', { level: 3 }, text )
+			);
+		const post = await createPost( requestUtils, {
+			content: block(
+				'strata/section',
+				{},
+				block(
+					'strata/columns',
+					{},
+					[
+						column( {}, 'Plain' ),
+						column( { colorScheme: SCHEMES.dark }, 'Box' ),
+					].join( '\n' )
+				)
+			),
+		} );
+		await page.setViewportSize( { width: 1280, height: 900 } );
+		await page.goto( post.link );
+		const headings = page.locator( '.strata-column .strata-heading' );
+		const plain = await headings.nth( 0 ).boundingBox();
+		const box = await headings.nth( 1 ).boundingBox();
+		expect( Math.round( plain.y ) ).toBe( Math.round( box.y ) );
+	} );
+
 	test( 'stack the columns on small screens', async ( {
 		page,
 		requestUtils,
