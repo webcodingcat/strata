@@ -32,6 +32,6 @@ WP_TEST_ENV_WORKSPACE=/home/saij/dev/wp-dev ../framework/wp-test-env/bin/run "$P
 
 ## Keep in sync
 
-- `composer.json` requires the released framework (`^0.18`); a feature of the framework's `main` needs a framework release before the release workflow of the theme can pass.
+- `composer.json` requires the released framework (`^0.19`); a feature of the framework's `main` needs a framework release before the release workflow of the theme can pass.
 - `screenshot.png` (1200 × 900) is the demo page `tests/e2e/demo.html` as a visitor sees it: after a change of the design, run `tests/screenshot` (a fresh instance of wp-test-env) and commit the new image.
 - A release tag `v<version>` equals `Version:` in `style.css`; every GitHub release gets written release notes.

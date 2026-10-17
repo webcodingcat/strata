@@ -92,7 +92,7 @@ Each step is one or two commits; lint and build before each commit.
 
 ## Dependencies
 
-- wp-app-framework 0.18.1 (`#[Identifier]`, settings scripts, `Repeater` and `#[Item]`, compact color controls), required as `^0.18`; locally the package link of wp-dev-env runs the framework checkout.
+- wp-app-framework 0.19.0 (`#[Identifier]`, settings scripts, `Repeater` and `#[Item]`, compact color controls, translations), required as `^0.19`; locally the package link of wp-dev-env runs the framework checkout.
 - Repository: https://github.com/saijsaij/strata
 
 ## Changes after the first version (2026-10-17)
