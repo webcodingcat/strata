@@ -1,0 +1,644 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Strata 0.1.0\n"
+"X-Domain: strata\n"
+
+#. Name of the theme
+#: style.css
+msgid "Strata"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "A block theme for one-page sites built from full-width sections with color schemes."
+msgstr ""
+
+#: src/Block/Buttons/Button.php
+msgid "Button"
+msgstr ""
+
+#: src/Block/Buttons/Button.php
+#: src/Block/Facts/Fact.php
+#: src/Block/Navigation/NavigationLink.php
+msgid "Label"
+msgstr ""
+
+#: src/Block/Buttons/Button.php
+#: src/Block/Facts/Fact.php
+#: src/Block/Image/ImageBlock.php
+#: src/Block/Navigation/NavigationLink.php
+msgid "Link"
+msgstr ""
+
+#: src/Block/Buttons/Button.php
+#: src/Block/Separator/Separator.php
+msgid "Variant"
+msgstr ""
+
+#: src/Block/Buttons/Button.php
+msgid "Primary"
+msgstr ""
+
+#: src/Block/Buttons/Button.php
+msgid "Secondary"
+msgstr ""
+
+#: src/Block/Buttons/Button.php
+#: src/Block/Heading/Heading.php
+#: src/Block/Paragraph/Paragraph.php
+#: src/Block/Quote/Quote.php
+#: src/Scheme/ColorSchemes.php
+msgid "Text"
+msgstr ""
+
+#: src/Block/Buttons/Buttons.php
+msgid "Buttons"
+msgstr ""
+
+#: src/Block/Buttons/Buttons.php
+#: src/Block/Group/Group.php
+#: src/Block/Navigation/Navigation.php
+msgid "Justify"
+msgstr ""
+
+#: src/Block/Buttons/Buttons.php
+#: src/Block/Group/Group.php
+#: src/Block/Heading/Heading.php
+#: src/Block/Navigation/Navigation.php
+#: src/Block/Paragraph/Paragraph.php
+msgid "Start"
+msgstr ""
+
+#: src/Block/Buttons/Buttons.php
+#: src/Block/Group/Group.php
+#: src/Block/Heading/Heading.php
+#: src/Block/Navigation/Navigation.php
+#: src/Block/Paragraph/Paragraph.php
+msgid "Center"
+msgstr ""
+
+#: src/Block/Buttons/Buttons.php
+#: src/Block/Group/Group.php
+#: src/Block/Heading/Heading.php
+#: src/Block/Navigation/Navigation.php
+#: src/Block/Paragraph/Paragraph.php
+msgid "End"
+msgstr ""
+
+#: src/Block/Columns/Column.php
+msgid "Column"
+msgstr ""
+
+#: src/Block/Columns/Column.php
+msgid "Vertical align"
+msgstr ""
+
+#: src/Block/Columns/Column.php
+msgid "Top"
+msgstr ""
+
+#: src/Block/Columns/Column.php
+msgid "Middle"
+msgstr ""
+
+#: src/Block/Columns/Column.php
+msgid "Bottom"
+msgstr ""
+
+#: src/Block/Columns/Column.php
+#: src/Block/Group/Group.php
+#: src/Block/Section/Section.php
+#: src/Scheme/ColorSchemes.php
+msgid "Color scheme"
+msgstr ""
+
+#: src/Block/Columns/Columns.php
+#: src/Block/People/People.php
+msgid "Columns"
+msgstr ""
+
+#: src/Block/Columns/Columns.php
+msgid "Ratio"
+msgstr ""
+
+#: src/Block/Columns/Columns.php
+msgid "Equal"
+msgstr ""
+
+#: src/Block/Columns/Columns.php
+msgid "First column wider (2 : 1)"
+msgstr ""
+
+#: src/Block/Columns/Columns.php
+msgid "Last column wider (1 : 2)"
+msgstr ""
+
+#: src/Block/Columns/Columns.php
+#: src/Block/Group/Group.php
+msgid "Gap"
+msgstr ""
+
+#: src/Block/Columns/Columns.php
+#: src/Block/Group/Group.php
+#: src/Block/Section/Section.php
+msgid "None"
+msgstr ""
+
+#: src/Block/Columns/Columns.php
+#: src/Block/Group/Group.php
+#: src/Block/Paragraph/Paragraph.php
+msgid "Small"
+msgstr ""
+
+#: src/Block/Columns/Columns.php
+#: src/Block/Group/Group.php
+#: src/Block/Paragraph/Paragraph.php
+#: src/Block/Section/Section.php
+msgid "Normal"
+msgstr ""
+
+#: src/Block/Columns/Columns.php
+#: src/Block/Group/Group.php
+msgid "Large"
+msgstr ""
+
+#: src/Block/Copyright/Copyright.php
+msgid "Copyright"
+msgstr ""
+
+#: src/Block/Copyright/Copyright.php
+msgid "The copyright line with the current year."
+msgstr ""
+
+#: src/Block/Copyright/Copyright.php
+msgid "Holder (empty: site title)"
+msgstr ""
+
+#: src/Block/Copyright/Copyright.php
+msgid "Since (year)"
+msgstr ""
+
+#: src/Block/Details/Details.php
+msgid "Details"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Details/Details.php
+msgid "faq"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Details/Details.php
+msgid "accordion"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Details/Details.php
+msgid "toggle"
+msgstr ""
+
+#: src/Block/Details/Details.php
+msgid "Summary"
+msgstr ""
+
+#: src/Block/Details/Details.php
+msgid "Open at first"
+msgstr ""
+
+#: src/Block/Facts/Fact.php
+msgid "Fact"
+msgstr ""
+
+#: src/Block/Facts/Fact.php
+msgid "Value"
+msgstr ""
+
+#: src/Block/Facts/Fact.php
+msgid "Icon"
+msgstr ""
+
+#: src/Block/Facts/Fact.php
+msgid "No icon"
+msgstr ""
+
+#: src/Block/Facts/Fact.php
+msgid "Info"
+msgstr ""
+
+#: src/Block/Facts/Fact.php
+msgid "Clock"
+msgstr ""
+
+#: src/Block/Facts/Fact.php
+msgid "Calendar"
+msgstr ""
+
+#: src/Block/Facts/Fact.php
+msgid "Place"
+msgstr ""
+
+#: src/Block/Facts/Fact.php
+#: src/Block/People/Person.php
+msgid "Phone"
+msgstr ""
+
+#: src/Block/Facts/Fact.php
+msgid "Mail"
+msgstr ""
+
+#: src/Block/Facts/Fact.php
+#: src/Block/People/People.php
+msgid "People"
+msgstr ""
+
+#: src/Block/Facts/Fact.php
+msgid "Music"
+msgstr ""
+
+#: src/Block/Facts/Fact.php
+msgid "Star"
+msgstr ""
+
+#: src/Block/Facts/Fact.php
+msgid "Heart"
+msgstr ""
+
+#: src/Block/Facts/Facts.php
+msgid "Facts"
+msgstr ""
+
+#: src/Block/Facts/Facts.php
+msgid "Key facts with an icon, a label and a value."
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Facts/Facts.php
+msgid "info"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Facts/Facts.php
+msgid "details"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Facts/Facts.php
+msgid "opening hours"
+msgstr ""
+
+#: src/Block/Facts/Facts.php
+msgid "Show as boxes"
+msgstr ""
+
+#: src/Block/Glossary/Glossary.php
+msgid "Glossary"
+msgstr ""
+
+#: src/Block/Glossary/Glossary.php
+msgid "Terms with explanations and an index A–Z."
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Glossary/Glossary.php
+msgid "lexicon"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Glossary/Glossary.php
+msgid "dictionary"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Glossary/Glossary.php
+msgid "terms"
+msgstr ""
+
+#: src/Block/Glossary/Glossary.php
+msgid "Name of the index for screen readers"
+msgstr ""
+
+#: src/Block/Glossary/Glossary.php
+msgid "Show the index A–Z"
+msgstr ""
+
+#: src/Block/Glossary/GlossaryTerm.php
+msgid "Glossary term"
+msgstr ""
+
+#: src/Block/Glossary/GlossaryTerm.php
+msgid "Term"
+msgstr ""
+
+#: src/Block/Glossary/GlossaryTerm.php
+msgid "Explanation"
+msgstr ""
+
+#: src/Block/Group/Group.php
+msgid "Group"
+msgstr ""
+
+#: src/Block/Group/Group.php
+msgid "Blocks one below the other or in a row."
+msgstr ""
+
+#: src/Block/Group/Group.php
+msgid "Stack"
+msgstr ""
+
+#: src/Block/Group/Group.php
+msgid "Row"
+msgstr ""
+
+#. Block category
+#: src/Block/Group/Group.php
+msgid "Layout"
+msgstr ""
+
+#: src/Block/Group/Group.php
+msgid "Space between"
+msgstr ""
+
+#: src/Block/Group/Group.php
+msgid "Align items"
+msgstr ""
+
+#: src/Block/Group/Group.php
+msgid "Stretch"
+msgstr ""
+
+#: src/Block/Group/Group.php
+msgid "Baseline"
+msgstr ""
+
+#: src/Block/Group/Group.php
+msgid "Wrap"
+msgstr ""
+
+#: src/Block/Heading/Heading.php
+msgid "Heading"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Heading/Heading.php
+msgid "title"
+msgstr ""
+
+#: src/Block/Heading/Heading.php
+msgid "Level"
+msgstr ""
+
+#: src/Block/Heading/Heading.php
+msgid "Heading 1"
+msgstr ""
+
+#: src/Block/Heading/Heading.php
+msgid "Heading 2"
+msgstr ""
+
+#: src/Block/Heading/Heading.php
+msgid "Heading 3"
+msgstr ""
+
+#: src/Block/Heading/Heading.php
+msgid "Heading 4"
+msgstr ""
+
+#: src/Block/Heading/Heading.php
+#: src/Block/Paragraph/Paragraph.php
+msgid "Text align"
+msgstr ""
+
+#: src/Block/Image/ImageBlock.php
+msgid "Image"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Image/ImageBlock.php
+msgid "photo"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Image/ImageBlock.php
+msgid "picture"
+msgstr ""
+
+#: src/Block/Image/ImageBlock.php
+msgid "Caption"
+msgstr ""
+
+#: src/Block/Image/ImageBlock.php
+msgid "Rounded"
+msgstr ""
+
+#: src/Block/ListBlock/ListBlock.php
+msgid "List"
+msgstr ""
+
+#: src/Block/ListBlock/ListBlock.php
+msgid "Ordered"
+msgstr ""
+
+#: src/Block/ListBlock/ListItem.php
+msgid "List item"
+msgstr ""
+
+#: src/Block/Navigation/Navigation.php
+msgid "Navigation"
+msgstr ""
+
+#: src/Block/Navigation/Navigation.php
+msgid "Links to the sections of the page and to other pages, behind a menu button on small screens."
+msgstr ""
+
+#: src/Block/Navigation/Navigation.php
+msgid "Name for screen readers"
+msgstr ""
+
+#: src/Block/Navigation/Navigation.php
+msgid "Menu button"
+msgstr ""
+
+#: src/Block/Navigation/Navigation.php
+msgid "Close button (for screen readers)"
+msgstr ""
+
+#: src/Block/Navigation/NavigationLink.php
+msgid "Navigation link"
+msgstr ""
+
+#: src/Block/Paragraph/Paragraph.php
+msgid "Paragraph"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Paragraph/Paragraph.php
+msgid "text"
+msgstr ""
+
+#: src/Block/Paragraph/Paragraph.php
+msgid "Size"
+msgstr ""
+
+#: src/Block/Paragraph/Paragraph.php
+msgid "Lead"
+msgstr ""
+
+#: src/Block/People/People.php
+msgid "A grid of people with photo, name and role."
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/People/People.php
+msgid "team"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/People/People.php
+msgid "board"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/People/People.php
+msgid "contact"
+msgstr ""
+
+#: src/Block/People/People.php
+msgid "2 per row"
+msgstr ""
+
+#: src/Block/People/People.php
+msgid "3 per row"
+msgstr ""
+
+#: src/Block/People/People.php
+msgid "4 per row"
+msgstr ""
+
+#: src/Block/People/Person.php
+msgid "Person"
+msgstr ""
+
+#: src/Block/People/Person.php
+msgid "Photo"
+msgstr ""
+
+#: src/Block/People/Person.php
+#: src/Scheme/ColorSchemes.php
+msgid "Name"
+msgstr ""
+
+#: src/Block/People/Person.php
+msgid "Role"
+msgstr ""
+
+#: src/Block/People/Person.php
+msgid "Email"
+msgstr ""
+
+#: src/Block/Quote/Quote.php
+msgid "Quote"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Quote/Quote.php
+msgid "citation"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Quote/Quote.php
+msgid "testimonial"
+msgstr ""
+
+#: src/Block/Quote/Quote.php
+msgid "Source"
+msgstr ""
+
+#: src/Block/Section/Section.php
+msgid "Section"
+msgstr ""
+
+#: src/Block/Section/Section.php
+msgid "A part of the page across the whole window, with a color scheme and a content width."
+msgstr ""
+
+#: src/Block/Section/Section.php
+msgid "Width"
+msgstr ""
+
+#: src/Block/Section/Section.php
+msgid "Narrow"
+msgstr ""
+
+#: src/Block/Section/Section.php
+msgid "Wide"
+msgstr ""
+
+#: src/Block/Section/Section.php
+msgid "Spacing"
+msgstr ""
+
+#: src/Block/Section/Section.php
+msgid "Compact"
+msgstr ""
+
+#: src/Block/Section/Section.php
+msgid "Spacious"
+msgstr ""
+
+#: src/Block/Separator/Separator.php
+msgid "Separator"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Separator/Separator.php
+msgid "divider"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Separator/Separator.php
+msgid "line"
+msgstr ""
+
+#. Search keyword of a block
+#: src/Block/Separator/Separator.php
+msgid "hr"
+msgstr ""
+
+#: src/Block/Separator/Separator.php
+msgid "Line"
+msgstr ""
+
+#: src/Block/Separator/Separator.php
+msgid "Short line"
+msgstr ""
+
+#: src/Block/Separator/Separator.php
+msgid "Space only"
+msgstr ""
+
+#. Block category
+msgid "Content"
+msgstr ""
+
+#: src/Scheme/ColorSchemes.php
+msgid "Color schemes"
+msgstr ""
+
+#: src/Scheme/ColorSchemes.php
+msgid "The first scheme colors the whole page; sections, groups and columns can choose any of them."
+msgstr ""
+
+#: src/Scheme/ColorSchemes.php
+msgid "Schemes"
+msgstr ""
+
+#: src/Scheme/ColorSchemes.php
+msgid "Background"
+msgstr ""
+
+#: src/Scheme/ColorSchemes.php
+msgid "Accent"
+msgstr ""

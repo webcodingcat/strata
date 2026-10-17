@@ -104,3 +104,4 @@ Each step is one or two commits; lint and build before each commit.
 - In the framework: compact color controls side by side, settings as headings (wp-app-framework `main`).
 - Font tokens `--font-body` and `--font-display` (see Typography) and the Navigation block.
 - Blocks People, Facts and Glossary.
+- Translations (framework 0.19): `vendor/bin/wp-app-framework pot` writes `languages/strata.pot`; `languages/strata-de_DE.po` is the German translation. The texts of the scheme editor (a script) are not translated yet.

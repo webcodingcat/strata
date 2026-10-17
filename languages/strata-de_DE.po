@@ -1,0 +1,647 @@
+# German translation of Strata.
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Strata 0.1.0\n"
+"X-Domain: strata\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Name of the theme
+#: style.css
+msgid "Strata"
+msgstr "Strata"
+
+#. Description of the theme
+#: style.css
+msgid "A block theme for one-page sites built from full-width sections with color schemes."
+msgstr "Ein Block-Theme für One-Page-Websites aus Abschnitten über die ganze Breite, mit Farbschemata."
+
+#: src/Block/Buttons/Button.php
+msgid "Button"
+msgstr "Button"
+
+#: src/Block/Buttons/Button.php
+#: src/Block/Facts/Fact.php
+#: src/Block/Navigation/NavigationLink.php
+msgid "Label"
+msgstr "Beschriftung"
+
+#: src/Block/Buttons/Button.php
+#: src/Block/Facts/Fact.php
+#: src/Block/Image/ImageBlock.php
+#: src/Block/Navigation/NavigationLink.php
+msgid "Link"
+msgstr "Link"
+
+#: src/Block/Buttons/Button.php
+#: src/Block/Separator/Separator.php
+msgid "Variant"
+msgstr "Variante"
+
+#: src/Block/Buttons/Button.php
+msgid "Primary"
+msgstr "Primär"
+
+#: src/Block/Buttons/Button.php
+msgid "Secondary"
+msgstr "Sekundär"
+
+#: src/Block/Buttons/Button.php
+#: src/Block/Heading/Heading.php
+#: src/Block/Paragraph/Paragraph.php
+#: src/Block/Quote/Quote.php
+#: src/Scheme/ColorSchemes.php
+msgid "Text"
+msgstr "Text"
+
+#: src/Block/Buttons/Buttons.php
+msgid "Buttons"
+msgstr "Buttons"
+
+#: src/Block/Buttons/Buttons.php
+#: src/Block/Group/Group.php
+#: src/Block/Navigation/Navigation.php
+msgid "Justify"
+msgstr "Ausrichtung"
+
+#: src/Block/Buttons/Buttons.php
+#: src/Block/Group/Group.php
+#: src/Block/Heading/Heading.php
+#: src/Block/Navigation/Navigation.php
+#: src/Block/Paragraph/Paragraph.php
+msgid "Start"
+msgstr "Anfang"
+
+#: src/Block/Buttons/Buttons.php
+#: src/Block/Group/Group.php
+#: src/Block/Heading/Heading.php
+#: src/Block/Navigation/Navigation.php
+#: src/Block/Paragraph/Paragraph.php
+msgid "Center"
+msgstr "Mitte"
+
+#: src/Block/Buttons/Buttons.php
+#: src/Block/Group/Group.php
+#: src/Block/Heading/Heading.php
+#: src/Block/Navigation/Navigation.php
+#: src/Block/Paragraph/Paragraph.php
+msgid "End"
+msgstr "Ende"
+
+#: src/Block/Columns/Column.php
+msgid "Column"
+msgstr "Spalte"
+
+#: src/Block/Columns/Column.php
+msgid "Vertical align"
+msgstr "Vertikale Ausrichtung"
+
+#: src/Block/Columns/Column.php
+msgid "Top"
+msgstr "Oben"
+
+#: src/Block/Columns/Column.php
+msgid "Middle"
+msgstr "Mitte"
+
+#: src/Block/Columns/Column.php
+msgid "Bottom"
+msgstr "Unten"
+
+#: src/Block/Columns/Column.php
+#: src/Block/Group/Group.php
+#: src/Block/Section/Section.php
+#: src/Scheme/ColorSchemes.php
+msgid "Color scheme"
+msgstr "Farbschema"
+
+#: src/Block/Columns/Columns.php
+#: src/Block/People/People.php
+msgid "Columns"
+msgstr "Spalten"
+
+#: src/Block/Columns/Columns.php
+msgid "Ratio"
+msgstr "Verhältnis"
+
+#: src/Block/Columns/Columns.php
+msgid "Equal"
+msgstr "Gleich"
+
+#: src/Block/Columns/Columns.php
+msgid "First column wider (2 : 1)"
+msgstr "Erste Spalte breiter (2 : 1)"
+
+#: src/Block/Columns/Columns.php
+msgid "Last column wider (1 : 2)"
+msgstr "Letzte Spalte breiter (1 : 2)"
+
+#: src/Block/Columns/Columns.php
+#: src/Block/Group/Group.php
+msgid "Gap"
+msgstr "Abstand"
+
+#: src/Block/Columns/Columns.php
+#: src/Block/Group/Group.php
+#: src/Block/Section/Section.php
+msgid "None"
+msgstr "Keiner"
+
+#: src/Block/Columns/Columns.php
+#: src/Block/Group/Group.php
+#: src/Block/Paragraph/Paragraph.php
+msgid "Small"
+msgstr "Klein"
+
+#: src/Block/Columns/Columns.php
+#: src/Block/Group/Group.php
+#: src/Block/Paragraph/Paragraph.php
+#: src/Block/Section/Section.php
+msgid "Normal"
+msgstr "Normal"
+
+#: src/Block/Columns/Columns.php
+#: src/Block/Group/Group.php
+msgid "Large"
+msgstr "Groß"
+
+#: src/Block/Copyright/Copyright.php
+msgid "Copyright"
+msgstr "Copyright"
+
+#: src/Block/Copyright/Copyright.php
+msgid "The copyright line with the current year."
+msgstr "Die Copyright-Zeile mit dem aktuellen Jahr."
+
+#: src/Block/Copyright/Copyright.php
+msgid "Holder (empty: site title)"
+msgstr "Inhaber (leer: Titel der Website)"
+
+#: src/Block/Copyright/Copyright.php
+msgid "Since (year)"
+msgstr "Seit (Jahr)"
+
+#: src/Block/Details/Details.php
+msgid "Details"
+msgstr "Details"
+
+#. Search keyword of a block
+#: src/Block/Details/Details.php
+msgid "faq"
+msgstr "faq"
+
+#. Search keyword of a block
+#: src/Block/Details/Details.php
+msgid "accordion"
+msgstr "akkordeon"
+
+#. Search keyword of a block
+#: src/Block/Details/Details.php
+msgid "toggle"
+msgstr "aufklappen"
+
+#: src/Block/Details/Details.php
+msgid "Summary"
+msgstr "Zusammenfassung"
+
+#: src/Block/Details/Details.php
+msgid "Open at first"
+msgstr "Anfangs geöffnet"
+
+#: src/Block/Facts/Fact.php
+msgid "Fact"
+msgstr "Fakt"
+
+#: src/Block/Facts/Fact.php
+msgid "Value"
+msgstr "Wert"
+
+#: src/Block/Facts/Fact.php
+msgid "Icon"
+msgstr "Icon"
+
+#: src/Block/Facts/Fact.php
+msgid "No icon"
+msgstr "Kein Icon"
+
+#: src/Block/Facts/Fact.php
+msgid "Info"
+msgstr "Info"
+
+#: src/Block/Facts/Fact.php
+msgid "Clock"
+msgstr "Uhr"
+
+#: src/Block/Facts/Fact.php
+msgid "Calendar"
+msgstr "Kalender"
+
+#: src/Block/Facts/Fact.php
+msgid "Place"
+msgstr "Ort"
+
+#: src/Block/Facts/Fact.php
+#: src/Block/People/Person.php
+msgid "Phone"
+msgstr "Telefon"
+
+#: src/Block/Facts/Fact.php
+msgid "Mail"
+msgstr "E-Mail"
+
+#: src/Block/Facts/Fact.php
+#: src/Block/People/People.php
+msgid "People"
+msgstr "Personen"
+
+#: src/Block/Facts/Fact.php
+msgid "Music"
+msgstr "Musik"
+
+#: src/Block/Facts/Fact.php
+msgid "Star"
+msgstr "Stern"
+
+#: src/Block/Facts/Fact.php
+msgid "Heart"
+msgstr "Herz"
+
+#: src/Block/Facts/Facts.php
+msgid "Facts"
+msgstr "Fakten"
+
+#: src/Block/Facts/Facts.php
+msgid "Key facts with an icon, a label and a value."
+msgstr "Wichtige Fakten mit Icon, Bezeichnung und Wert."
+
+#. Search keyword of a block
+#: src/Block/Facts/Facts.php
+msgid "info"
+msgstr "info"
+
+#. Search keyword of a block
+#: src/Block/Facts/Facts.php
+msgid "details"
+msgstr "details"
+
+#. Search keyword of a block
+#: src/Block/Facts/Facts.php
+msgid "opening hours"
+msgstr "öffnungszeiten"
+
+#: src/Block/Facts/Facts.php
+msgid "Show as boxes"
+msgstr "Als Kästen anzeigen"
+
+#: src/Block/Glossary/Glossary.php
+msgid "Glossary"
+msgstr "Glossar"
+
+#: src/Block/Glossary/Glossary.php
+msgid "Terms with explanations and an index A–Z."
+msgstr "Begriffe mit Erklärungen und einem Register A–Z."
+
+#. Search keyword of a block
+#: src/Block/Glossary/Glossary.php
+msgid "lexicon"
+msgstr "lexikon"
+
+#. Search keyword of a block
+#: src/Block/Glossary/Glossary.php
+msgid "dictionary"
+msgstr "wörterbuch"
+
+#. Search keyword of a block
+#: src/Block/Glossary/Glossary.php
+msgid "terms"
+msgstr "begriffe"
+
+#: src/Block/Glossary/Glossary.php
+msgid "Name of the index for screen readers"
+msgstr "Name des Registers für Screenreader"
+
+#: src/Block/Glossary/Glossary.php
+msgid "Show the index A–Z"
+msgstr "Register A–Z anzeigen"
+
+#: src/Block/Glossary/GlossaryTerm.php
+msgid "Glossary term"
+msgstr "Glossar-Begriff"
+
+#: src/Block/Glossary/GlossaryTerm.php
+msgid "Term"
+msgstr "Begriff"
+
+#: src/Block/Glossary/GlossaryTerm.php
+msgid "Explanation"
+msgstr "Erklärung"
+
+#: src/Block/Group/Group.php
+msgid "Group"
+msgstr "Gruppe"
+
+#: src/Block/Group/Group.php
+msgid "Blocks one below the other or in a row."
+msgstr "Blöcke untereinander oder in einer Reihe."
+
+#: src/Block/Group/Group.php
+msgid "Stack"
+msgstr "Untereinander"
+
+#: src/Block/Group/Group.php
+msgid "Row"
+msgstr "Reihe"
+
+#. Block category
+#: src/Block/Group/Group.php
+msgid "Layout"
+msgstr "Layout"
+
+#: src/Block/Group/Group.php
+msgid "Space between"
+msgstr "Verteilt"
+
+#: src/Block/Group/Group.php
+msgid "Align items"
+msgstr "Elemente ausrichten"
+
+#: src/Block/Group/Group.php
+msgid "Stretch"
+msgstr "Strecken"
+
+#: src/Block/Group/Group.php
+msgid "Baseline"
+msgstr "Grundlinie"
+
+#: src/Block/Group/Group.php
+msgid "Wrap"
+msgstr "Umbrechen"
+
+#: src/Block/Heading/Heading.php
+msgid "Heading"
+msgstr "Überschrift"
+
+#. Search keyword of a block
+#: src/Block/Heading/Heading.php
+msgid "title"
+msgstr "titel"
+
+#: src/Block/Heading/Heading.php
+msgid "Level"
+msgstr "Ebene"
+
+#: src/Block/Heading/Heading.php
+msgid "Heading 1"
+msgstr "Überschrift 1"
+
+#: src/Block/Heading/Heading.php
+msgid "Heading 2"
+msgstr "Überschrift 2"
+
+#: src/Block/Heading/Heading.php
+msgid "Heading 3"
+msgstr "Überschrift 3"
+
+#: src/Block/Heading/Heading.php
+msgid "Heading 4"
+msgstr "Überschrift 4"
+
+#: src/Block/Heading/Heading.php
+#: src/Block/Paragraph/Paragraph.php
+msgid "Text align"
+msgstr "Textausrichtung"
+
+#: src/Block/Image/ImageBlock.php
+msgid "Image"
+msgstr "Bild"
+
+#. Search keyword of a block
+#: src/Block/Image/ImageBlock.php
+msgid "photo"
+msgstr "foto"
+
+#. Search keyword of a block
+#: src/Block/Image/ImageBlock.php
+msgid "picture"
+msgstr "bild"
+
+#: src/Block/Image/ImageBlock.php
+msgid "Caption"
+msgstr "Bildunterschrift"
+
+#: src/Block/Image/ImageBlock.php
+msgid "Rounded"
+msgstr "Abgerundet"
+
+#: src/Block/ListBlock/ListBlock.php
+msgid "List"
+msgstr "Liste"
+
+#: src/Block/ListBlock/ListBlock.php
+msgid "Ordered"
+msgstr "Nummeriert"
+
+#: src/Block/ListBlock/ListItem.php
+msgid "List item"
+msgstr "Listeneintrag"
+
+#: src/Block/Navigation/Navigation.php
+msgid "Navigation"
+msgstr "Navigation"
+
+#: src/Block/Navigation/Navigation.php
+msgid "Links to the sections of the page and to other pages, behind a menu button on small screens."
+msgstr "Links zu den Abschnitten der Seite und zu anderen Seiten, auf kleinen Bildschirmen hinter einem Menü-Button."
+
+#: src/Block/Navigation/Navigation.php
+msgid "Name for screen readers"
+msgstr "Name für Screenreader"
+
+#: src/Block/Navigation/Navigation.php
+msgid "Menu button"
+msgstr "Menü-Button"
+
+#: src/Block/Navigation/Navigation.php
+msgid "Close button (for screen readers)"
+msgstr "Schließen-Button (für Screenreader)"
+
+#: src/Block/Navigation/NavigationLink.php
+msgid "Navigation link"
+msgstr "Navigationslink"
+
+#: src/Block/Paragraph/Paragraph.php
+msgid "Paragraph"
+msgstr "Absatz"
+
+#. Search keyword of a block
+#: src/Block/Paragraph/Paragraph.php
+msgid "text"
+msgstr "text"
+
+#: src/Block/Paragraph/Paragraph.php
+msgid "Size"
+msgstr "Größe"
+
+#: src/Block/Paragraph/Paragraph.php
+msgid "Lead"
+msgstr "Einleitung"
+
+#: src/Block/People/People.php
+msgid "A grid of people with photo, name and role."
+msgstr "Ein Raster aus Personen mit Foto, Name und Funktion."
+
+#. Search keyword of a block
+#: src/Block/People/People.php
+msgid "team"
+msgstr "team"
+
+#. Search keyword of a block
+#: src/Block/People/People.php
+msgid "board"
+msgstr "vorstand"
+
+#. Search keyword of a block
+#: src/Block/People/People.php
+msgid "contact"
+msgstr "kontakt"
+
+#: src/Block/People/People.php
+msgid "2 per row"
+msgstr "2 pro Reihe"
+
+#: src/Block/People/People.php
+msgid "3 per row"
+msgstr "3 pro Reihe"
+
+#: src/Block/People/People.php
+msgid "4 per row"
+msgstr "4 pro Reihe"
+
+#: src/Block/People/Person.php
+msgid "Person"
+msgstr "Person"
+
+#: src/Block/People/Person.php
+msgid "Photo"
+msgstr "Foto"
+
+#: src/Block/People/Person.php
+#: src/Scheme/ColorSchemes.php
+msgid "Name"
+msgstr "Name"
+
+#: src/Block/People/Person.php
+msgid "Role"
+msgstr "Funktion"
+
+#: src/Block/People/Person.php
+msgid "Email"
+msgstr "E-Mail"
+
+#: src/Block/Quote/Quote.php
+msgid "Quote"
+msgstr "Zitat"
+
+#. Search keyword of a block
+#: src/Block/Quote/Quote.php
+msgid "citation"
+msgstr "zitat"
+
+#. Search keyword of a block
+#: src/Block/Quote/Quote.php
+msgid "testimonial"
+msgstr "stimme"
+
+#: src/Block/Quote/Quote.php
+msgid "Source"
+msgstr "Quelle"
+
+#: src/Block/Section/Section.php
+msgid "Section"
+msgstr "Abschnitt"
+
+#: src/Block/Section/Section.php
+msgid "A part of the page across the whole window, with a color scheme and a content width."
+msgstr "Ein Teil der Seite über das ganze Fenster, mit Farbschema und Inhaltsbreite."
+
+#: src/Block/Section/Section.php
+msgid "Width"
+msgstr "Breite"
+
+#: src/Block/Section/Section.php
+msgid "Narrow"
+msgstr "Schmal"
+
+#: src/Block/Section/Section.php
+msgid "Wide"
+msgstr "Breit"
+
+#: src/Block/Section/Section.php
+msgid "Spacing"
+msgstr "Abstand"
+
+#: src/Block/Section/Section.php
+msgid "Compact"
+msgstr "Kompakt"
+
+#: src/Block/Section/Section.php
+msgid "Spacious"
+msgstr "Großzügig"
+
+#: src/Block/Separator/Separator.php
+msgid "Separator"
+msgstr "Trennlinie"
+
+#. Search keyword of a block
+#: src/Block/Separator/Separator.php
+msgid "divider"
+msgstr "trenner"
+
+#. Search keyword of a block
+#: src/Block/Separator/Separator.php
+msgid "line"
+msgstr "linie"
+
+#. Search keyword of a block
+#: src/Block/Separator/Separator.php
+msgid "hr"
+msgstr "hr"
+
+#: src/Block/Separator/Separator.php
+msgid "Line"
+msgstr "Linie"
+
+#: src/Block/Separator/Separator.php
+msgid "Short line"
+msgstr "Kurze Linie"
+
+#: src/Block/Separator/Separator.php
+msgid "Space only"
+msgstr "Nur Abstand"
+
+#. Block category
+msgid "Content"
+msgstr "Inhalt"
+
+#: src/Scheme/ColorSchemes.php
+msgid "Color schemes"
+msgstr "Farbschemata"
+
+#: src/Scheme/ColorSchemes.php
+msgid "The first scheme colors the whole page; sections, groups and columns can choose any of them."
+msgstr "Das erste Schema färbt die ganze Seite; Abschnitte, Gruppen und Spalten können jedes davon wählen."
+
+#: src/Scheme/ColorSchemes.php
+msgid "Schemes"
+msgstr "Schemata"
+
+#: src/Scheme/ColorSchemes.php
+msgid "Background"
+msgstr "Hintergrund"
+
+#: src/Scheme/ColorSchemes.php
+msgid "Accent"
+msgstr "Akzent"
