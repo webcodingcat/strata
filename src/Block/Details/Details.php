@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Details;
+namespace WebCodingCat\Strata\Block\Details;
 
-use Saij\Strata\Block\Category;
-use Saij\Strata\Block\Paragraph\Paragraph;
-use Saij\Strata\Block\Section\Section;
-use Saij\WpAppFramework\Block\Block;
-use Saij\WpAppFramework\Block\InnerBlocks;
-use Saij\WpAppFramework\Block\Supports;
-use Saij\WpAppFramework\Block\TemplateBlock;
-use Saij\WpAppFramework\Twig\TemplateRenderer;
+use WebCodingCat\Strata\Block\Category;
+use WebCodingCat\Strata\Block\Paragraph\Paragraph;
+use WebCodingCat\Strata\Block\Section\Section;
+use WebCodingCat\WpAppFramework\Block\Block;
+use WebCodingCat\WpAppFramework\Block\InnerBlocks;
+use WebCodingCat\WpAppFramework\Block\Supports;
+use WebCodingCat\WpAppFramework\Block\TemplateBlock;
+use WebCodingCat\WpAppFramework\Twig\TemplateRenderer;
 
 /**
  * A summary that opens to its content, e.g. a question of a FAQ. In the editor it is always open.

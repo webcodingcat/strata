@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Text;
+namespace WebCodingCat\Strata\Block\Text;
 
-use Saij\WpAppFramework\Value\Labeled;
+use WebCodingCat\WpAppFramework\Value\Labeled;
 
 enum TextSize: string implements Labeled
 {

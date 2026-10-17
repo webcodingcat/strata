@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\People;
+namespace WebCodingCat\Strata\Block\People;
 
-use Saij\Strata\Block\Category;
-use Saij\WpAppFramework\Block\Block;
-use Saij\WpAppFramework\Twig\TemplateRenderer;
+use WebCodingCat\Strata\Block\Category;
+use WebCodingCat\WpAppFramework\Block\Block;
+use WebCodingCat\WpAppFramework\Twig\TemplateRenderer;
 
 /**
  * A person: portrait photo, name, role, and phone and email as links when given.

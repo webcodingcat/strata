@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Buttons;
+namespace WebCodingCat\Strata\Block\Buttons;
 
 final readonly class ButtonsAttributes
 {

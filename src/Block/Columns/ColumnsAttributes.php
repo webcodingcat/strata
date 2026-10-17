@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Columns;
+namespace WebCodingCat\Strata\Block\Columns;
 
-use Saij\Strata\Block\Group\GroupGap;
+use WebCodingCat\Strata\Block\Group\GroupGap;
 
 final readonly class ColumnsAttributes
 {

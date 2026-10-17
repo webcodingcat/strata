@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Site;
+namespace WebCodingCat\Strata\Site;
 
-use Saij\WpAppFramework\Lifecycle\OnActivation;
+use WebCodingCat\WpAppFramework\Lifecycle\OnActivation;
 use WP_Post;
 
 /**

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\People;
+namespace WebCodingCat\Strata\Block\People;
 
-use Saij\Strata\Block\Category;
-use Saij\Strata\Block\Section\Section;
-use Saij\WpAppFramework\Block\Block;
-use Saij\WpAppFramework\Block\InnerBlocks;
-use Saij\WpAppFramework\Block\Orientation;
-use Saij\WpAppFramework\Block\Supports;
-use Saij\WpAppFramework\Block\TemplateBlock;
-use Saij\WpAppFramework\Twig\TemplateRenderer;
+use WebCodingCat\Strata\Block\Category;
+use WebCodingCat\Strata\Block\Section\Section;
+use WebCodingCat\WpAppFramework\Block\Block;
+use WebCodingCat\WpAppFramework\Block\InnerBlocks;
+use WebCodingCat\WpAppFramework\Block\Orientation;
+use WebCodingCat\WpAppFramework\Block\Supports;
+use WebCodingCat\WpAppFramework\Block\TemplateBlock;
+use WebCodingCat\WpAppFramework\Twig\TemplateRenderer;
 
 /**
  * A grid of people – a team, a board, contact persons – each with photo, name, role and optional phone and email.

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Paragraph;
+namespace WebCodingCat\Strata\Block\Paragraph;
 
-use Saij\Strata\Block\Text\TextAlign;
-use Saij\Strata\Block\Text\TextSize;
-use Saij\WpAppFramework\Value\RichText;
+use WebCodingCat\Strata\Block\Text\TextAlign;
+use WebCodingCat\Strata\Block\Text\TextSize;
+use WebCodingCat\WpAppFramework\Value\RichText;
 
 final readonly class ParagraphAttributes
 {

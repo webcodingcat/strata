@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Section;
+namespace WebCodingCat\Strata\Block\Section;
 
-use Saij\WpAppFramework\Value\Labeled;
+use WebCodingCat\WpAppFramework\Value\Labeled;
 
 /**
  * How wide the content of a section is; the section itself always spans the whole window.

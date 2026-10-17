@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Site;
+namespace WebCodingCat\Strata\Site;
 
-use Saij\WpAppFramework\Hook\Hook;
+use WebCodingCat\WpAppFramework\Hook\Hook;
 use WP_Query;
 
 /**

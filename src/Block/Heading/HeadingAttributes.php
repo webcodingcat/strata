@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Heading;
+namespace WebCodingCat\Strata\Block\Heading;
 
-use Saij\Strata\Block\Text\TextAlign;
-use Saij\WpAppFramework\Value\RichText;
+use WebCodingCat\Strata\Block\Text\TextAlign;
+use WebCodingCat\WpAppFramework\Value\RichText;
 
 final readonly class HeadingAttributes
 {

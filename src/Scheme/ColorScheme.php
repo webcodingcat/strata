@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Scheme;
+namespace WebCodingCat\Strata\Scheme;
 
-use Saij\WpAppFramework\Value\Color;
-use Saij\WpAppFramework\Value\Identifier;
-use Saij\WpAppFramework\Value\Label;
-use Saij\WpAppFramework\Value\PlainText;
+use WebCodingCat\WpAppFramework\Value\Color;
+use WebCodingCat\WpAppFramework\Value\Identifier;
+use WebCodingCat\WpAppFramework\Value\Label;
+use WebCodingCat\WpAppFramework\Value\PlainText;
 
 /**
  * A color scheme: background, foreground (text) and accent. A color left empty keeps the color of the scheme around

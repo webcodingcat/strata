@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Heading;
+namespace WebCodingCat\Strata\Block\Heading;
 
-use Saij\WpAppFramework\Value\Labeled;
+use WebCodingCat\WpAppFramework\Value\Labeled;
 
 enum HeadingLevel: int implements Labeled
 {

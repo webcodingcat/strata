@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Navigation;
+namespace WebCodingCat\Strata\Block\Navigation;
 
-use Saij\Strata\Block\Category;
-use Saij\WpAppFramework\Block\Block;
-use Saij\WpAppFramework\Twig\TemplateRenderer;
+use WebCodingCat\Strata\Block\Category;
+use WebCodingCat\WpAppFramework\Block\Block;
+use WebCodingCat\WpAppFramework\Twig\TemplateRenderer;
 
 /**
  * A link of the navigation: to a section of the page (a free URL such as `#training`, or `/#training` from other

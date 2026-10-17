@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Copyright;
+namespace WebCodingCat\Strata\Block\Copyright;
 
-use Saij\WpAppFramework\Value\Label;
-use Saij\WpAppFramework\Value\PlainText;
+use WebCodingCat\WpAppFramework\Value\Label;
+use WebCodingCat\WpAppFramework\Value\PlainText;
 
 final readonly class CopyrightAttributes
 {

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Columns;
+namespace WebCodingCat\Strata\Block\Columns;
 
-use Saij\Strata\Block\Category;
-use Saij\Strata\Scheme\ColorSchemeSupport;
-use Saij\WpAppFramework\Block\Block;
-use Saij\WpAppFramework\Block\Support\UseSupport;
-use Saij\WpAppFramework\Block\Supports;
-use Saij\WpAppFramework\Twig\TemplateRenderer;
+use WebCodingCat\Strata\Block\Category;
+use WebCodingCat\Strata\Scheme\ColorSchemeSupport;
+use WebCodingCat\WpAppFramework\Block\Block;
+use WebCodingCat\WpAppFramework\Block\Support\UseSupport;
+use WebCodingCat\WpAppFramework\Block\Supports;
+use WebCodingCat\WpAppFramework\Twig\TemplateRenderer;
 
 /**
  * One column of a columns block.

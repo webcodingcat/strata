@@ -92,7 +92,7 @@ Each step is one or two commits; lint and build before each commit.
 
 ## Dependencies
 
-- wp-app-framework 0.19.0 (`#[Identifier]`, settings scripts, `Repeater` and `#[Item]`, compact color controls, translations), required as `^0.19`; locally the package link of wp-dev-env runs the framework checkout.
+- wp-app-framework 0.20.0 (`webcodingcat/wp-app-framework`; since 0.19 `#[Identifier]`, settings scripts, `Repeater` and `#[Item]`, compact color controls, translations), required as `^0.20`; locally the package link of wp-dev-env runs the framework checkout.
 - Repository: https://github.com/webcodingcat/strata
 
 ## Changes after the first version (2026-10-17)
@@ -105,3 +105,4 @@ Each step is one or two commits; lint and build before each commit.
 - Font tokens `--font-body` and `--font-display` (see Typography) and the Navigation block.
 - Blocks People, Facts and Glossary.
 - Translations (framework 0.19): `vendor/bin/wp-app-framework pot` writes `languages/strata.pot`; `languages/strata-de_DE.po` is the German translation. The texts of the scheme editor (a script) are not translated yet.
+- Web Coding Cat (release 0.3.0): the repository moved to the organization webcodingcat; package `webcodingcat/strata`, PHP namespace `WebCodingCat\Strata`, framework 0.20 (`webcodingcat/wp-app-framework`). Blocks, options and settings keep their names (`strata/…`, `strata_…`).

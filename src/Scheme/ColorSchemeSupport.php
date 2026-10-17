@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Scheme;
+namespace WebCodingCat\Strata\Scheme;
 
-use Saij\WpAppFramework\Block\Support\BlockSupport;
+use WebCodingCat\WpAppFramework\Block\Support\BlockSupport;
 
 /**
  * The color scheme of a section, group or column: the identifier of one of the schemes. Without one, or if the

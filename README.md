@@ -7,7 +7,7 @@ built with [wp-app-framework](https://webcodingcat.github.io/wp-app-framework/):
 
 - Slug (directory name): `strata`
 - Namespace: `strata`, the name in front of blocks (`strata/…`), REST routes, settings options, post types and tables; content refers to it, so keep it.
-- PHP namespace: `Saij\Strata\` in `src/`
+- PHP namespace: `WebCodingCat\Strata\` in `src/`
 
 ## Requirements
 

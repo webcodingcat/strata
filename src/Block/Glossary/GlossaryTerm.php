@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Glossary;
+namespace WebCodingCat\Strata\Block\Glossary;
 
-use Saij\Strata\Block\Category;
-use Saij\WpAppFramework\Block\Block;
-use Saij\WpAppFramework\Twig\TemplateRenderer;
+use WebCodingCat\Strata\Block\Category;
+use WebCodingCat\WpAppFramework\Block\Block;
+use WebCodingCat\WpAppFramework\Twig\TemplateRenderer;
 
 /**
  * A term of the glossary with its explanation; the explanation is stored in the post content, so search and exports

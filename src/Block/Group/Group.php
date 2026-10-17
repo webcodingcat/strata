@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Group;
+namespace WebCodingCat\Strata\Block\Group;
 
-use Saij\Strata\Block\Category;
-use Saij\Strata\Block\Section\Section;
-use Saij\Strata\Scheme\ColorSchemeSupport;
-use Saij\WpAppFramework\Block\Block;
-use Saij\WpAppFramework\Block\Support\UseSupport;
-use Saij\WpAppFramework\Block\Supports;
-use Saij\WpAppFramework\Block\Variation;
-use Saij\WpAppFramework\Block\VariationScope;
-use Saij\WpAppFramework\Twig\TemplateRenderer;
+use WebCodingCat\Strata\Block\Category;
+use WebCodingCat\Strata\Block\Section\Section;
+use WebCodingCat\Strata\Scheme\ColorSchemeSupport;
+use WebCodingCat\WpAppFramework\Block\Block;
+use WebCodingCat\WpAppFramework\Block\Support\UseSupport;
+use WebCodingCat\WpAppFramework\Block\Supports;
+use WebCodingCat\WpAppFramework\Block\Variation;
+use WebCodingCat\WpAppFramework\Block\VariationScope;
+use WebCodingCat\WpAppFramework\Twig\TemplateRenderer;
 
 /**
  * Blocks one below the other or in a row; with a color scheme it becomes a box.

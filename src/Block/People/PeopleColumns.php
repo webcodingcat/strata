@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\People;
+namespace WebCodingCat\Strata\Block\People;
 
-use Saij\WpAppFramework\Value\Labeled;
+use WebCodingCat\WpAppFramework\Value\Labeled;
 
 /**
  * People per row from `md` on; below, two per row (one with two columns).

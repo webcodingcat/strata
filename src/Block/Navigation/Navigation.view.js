@@ -1,4 +1,4 @@
-import { BlockView } from '@saij/wp-app-framework/view';
+import { BlockView } from '@webcodingcat/wp-app-framework/view';
 
 /**
  * Closes the menu panel of small screens when a link in it is followed: a link to a section of the same page does not

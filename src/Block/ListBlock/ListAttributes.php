@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\ListBlock;
+namespace WebCodingCat\Strata\Block\ListBlock;
 
 final readonly class ListAttributes
 {

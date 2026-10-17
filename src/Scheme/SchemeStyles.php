@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Scheme;
+namespace WebCodingCat\Strata\Scheme;
 
-use Saij\WpAppFramework\Hook\Hook;
-use Saij\WpAppFramework\View\ViewData;
+use WebCodingCat\WpAppFramework\Hook\Hook;
+use WebCodingCat\WpAppFramework\View\ViewData;
 
 /**
  * Prints the color schemes as CSS variables after the stylesheet of the theme (front end and editor canvas): the

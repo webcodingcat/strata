@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Editor;
+namespace WebCodingCat\Strata\Editor;
 
-use Saij\WpAppFramework\Block\CoreBlock;
-use Saij\WpAppFramework\Hook\Hook;
+use WebCodingCat\WpAppFramework\Block\CoreBlock;
+use WebCodingCat\WpAppFramework\Hook\Hook;
 use WP_Block_Type_Registry;
 
 /**

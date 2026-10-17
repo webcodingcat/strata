@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\People;
+namespace WebCodingCat\Strata\Block\People;
 
 final readonly class PeopleAttributes
 {

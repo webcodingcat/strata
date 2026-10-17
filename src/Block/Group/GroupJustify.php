@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Group;
+namespace WebCodingCat\Strata\Block\Group;
 
-use Saij\WpAppFramework\Value\Labeled;
+use WebCodingCat\WpAppFramework\Value\Labeled;
 
 /**
  * Where the blocks of a group sit along its direction.

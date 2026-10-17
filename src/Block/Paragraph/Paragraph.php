@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Paragraph;
+namespace WebCodingCat\Strata\Block\Paragraph;
 
-use Saij\Strata\Block\Category;
-use Saij\Strata\Block\Section\Section;
-use Saij\WpAppFramework\Block\Block;
-use Saij\WpAppFramework\Block\Supports;
-use Saij\WpAppFramework\Twig\TemplateRenderer;
+use WebCodingCat\Strata\Block\Category;
+use WebCodingCat\Strata\Block\Section\Section;
+use WebCodingCat\WpAppFramework\Block\Block;
+use WebCodingCat\WpAppFramework\Block\Supports;
+use WebCodingCat\WpAppFramework\Twig\TemplateRenderer;
 
 /**
  * A paragraph; its text is stored in the post content.

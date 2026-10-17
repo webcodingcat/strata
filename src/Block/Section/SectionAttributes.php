@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Section;
+namespace WebCodingCat\Strata\Block\Section;
 
 final readonly class SectionAttributes
 {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Buttons;
+namespace WebCodingCat\Strata\Block\Buttons;
 
-use Saij\WpAppFramework\Value\Labeled;
+use WebCodingCat\WpAppFramework\Value\Labeled;
 
 enum ButtonStyle: string implements Labeled
 {

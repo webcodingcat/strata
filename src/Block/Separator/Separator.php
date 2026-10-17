@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Separator;
+namespace WebCodingCat\Strata\Block\Separator;
 
-use Saij\Strata\Block\Category;
-use Saij\Strata\Block\Section\Section;
-use Saij\WpAppFramework\Block\Block;
-use Saij\WpAppFramework\Twig\TemplateRenderer;
+use WebCodingCat\Strata\Block\Category;
+use WebCodingCat\Strata\Block\Section\Section;
+use WebCodingCat\WpAppFramework\Block\Block;
+use WebCodingCat\WpAppFramework\Twig\TemplateRenderer;
 
 /**
  * A break between parts of the content: a line, a short line or space only.

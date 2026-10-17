@@ -2,7 +2,7 @@
  * The scheme editor on the settings page: below the generated fields of each scheme, a preview of its colors and
  * the contrast of each pair, rated after WCAG (contrast.js). Empty colors keep those of the page scheme.
  */
-import { registerSettingsControl } from '@saij/wp-app-framework/settings';
+import { registerSettingsControl } from '@webcodingcat/wp-app-framework/settings';
 
 import { contrast, rating } from './contrast';
 

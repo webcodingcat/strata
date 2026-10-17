@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Columns;
+namespace WebCodingCat\Strata\Block\Columns;
 
-use Saij\WpAppFramework\Value\Labeled;
+use WebCodingCat\WpAppFramework\Value\Labeled;
 
 /**
  * How the width is shared between the columns on wide screens; below, the columns stack.

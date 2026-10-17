@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Facts;
+namespace WebCodingCat\Strata\Block\Facts;
 
-use Saij\Strata\Block\Category;
-use Saij\WpAppFramework\Block\Block;
-use Saij\WpAppFramework\Twig\TemplateRenderer;
+use WebCodingCat\Strata\Block\Category;
+use WebCodingCat\WpAppFramework\Block\Block;
+use WebCodingCat\WpAppFramework\Twig\TemplateRenderer;
 
 /**
  * A fact: an optional icon, a label ("Training") and the value ("Tuesdays from 7 pm"), the value linked when a link

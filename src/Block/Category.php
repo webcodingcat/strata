@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block;
+namespace WebCodingCat\Strata\Block;
 
-use Saij\WpAppFramework\Block\CustomBlockCategory;
+use WebCodingCat\WpAppFramework\Block\CustomBlockCategory;
 
 /**
  * The block categories of the theme in the inserter.

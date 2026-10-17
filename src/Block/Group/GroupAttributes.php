@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Group;
+namespace WebCodingCat\Strata\Block\Group;
 
 final readonly class GroupAttributes
 {

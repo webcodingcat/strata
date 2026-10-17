@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Facts;
+namespace WebCodingCat\Strata\Block\Facts;
 
-use Saij\WpAppFramework\Value\Label;
+use WebCodingCat\WpAppFramework\Value\Label;
 
 final readonly class FactsAttributes
 {

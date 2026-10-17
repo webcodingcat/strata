@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Copyright;
+namespace WebCodingCat\Strata\Block\Copyright;
 
-use Saij\Strata\Block\Category;
-use Saij\Strata\Block\Section\Section;
-use Saij\WpAppFramework\Block\Block;
-use Saij\WpAppFramework\Twig\TemplateRenderer;
+use WebCodingCat\Strata\Block\Category;
+use WebCodingCat\Strata\Block\Section\Section;
+use WebCodingCat\WpAppFramework\Block\Block;
+use WebCodingCat\WpAppFramework\Twig\TemplateRenderer;
 
 /**
  * "© 2026 Holder": the year is always the current one, from an optional first year ("© 2019–2026"); the holder is

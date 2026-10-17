@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Section;
+namespace WebCodingCat\Strata\Block\Section;
 
-use Saij\Strata\Block\Category;
-use Saij\Strata\Scheme\ColorSchemeSupport;
-use Saij\WpAppFramework\Block\Block;
-use Saij\WpAppFramework\Block\Support\UseSupport;
-use Saij\WpAppFramework\Block\Supports;
-use Saij\WpAppFramework\Twig\TemplateRenderer;
+use WebCodingCat\Strata\Block\Category;
+use WebCodingCat\Strata\Scheme\ColorSchemeSupport;
+use WebCodingCat\WpAppFramework\Block\Block;
+use WebCodingCat\WpAppFramework\Block\Support\UseSupport;
+use WebCodingCat\WpAppFramework\Block\Supports;
+use WebCodingCat\WpAppFramework\Twig\TemplateRenderer;
 
 /**
  * A part of the page across the whole window: its content limited to a width, with a color scheme.

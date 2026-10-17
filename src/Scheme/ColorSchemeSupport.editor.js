@@ -3,7 +3,10 @@
  * with its name and a swatch of its colors. A block without a scheme of its own shows the first (the page scheme)
  * as chosen: at the top level that is what it has. The schemes are view data of SchemeStyles.
  */
-import { getData, registerSupportControl } from '@saij/wp-app-framework';
+import {
+	getData,
+	registerSupportControl,
+} from '@webcodingcat/wp-app-framework';
 import { BaseControl, Button } from '@wordpress/components';
 
 function Swatch( { scheme, page } ) {

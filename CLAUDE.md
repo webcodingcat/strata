@@ -1,6 +1,6 @@
 # CLAUDE.md – Strata
 
-Block theme for one-page sites built with [wp-app-framework](https://github.com/webcodingcat/wp-app-framework) (slug `strata`, namespace `strata`: blocks `strata/…`, options `strata_…`, PHP `Saij\Strata\`). Not tied to a client; client sites include it as a standalone theme. `PLAN.md` holds the decisions and the steps – read it before you change anything, and keep it current. Framework principles, conventions and testing rules: the [developer documentation](https://webcodingcat.github.io/wp-app-framework/next/development/) and the framework's CLAUDE.md (in the workspace `framework/wp-app-framework/`).
+Block theme for one-page sites built with [wp-app-framework](https://github.com/webcodingcat/wp-app-framework) (slug `strata`, namespace `strata`: blocks `strata/…`, options `strata_…`, PHP `WebCodingCat\Strata\`). Not tied to a client; client sites include it as a standalone theme. `PLAN.md` holds the decisions and the steps – read it before you change anything, and keep it current. Framework principles, conventions and testing rules: the [developer documentation](https://webcodingcat.github.io/wp-app-framework/next/development/) and the framework's CLAUDE.md (in the workspace `framework/wp-app-framework/`).
 
 ## Rules
 
@@ -32,6 +32,6 @@ WP_TEST_ENV_WORKSPACE=/home/saij/dev/wp-dev ../framework/wp-test-env/bin/run "$P
 
 ## Keep in sync
 
-- `composer.json` requires the released framework (`^0.19`); a feature of the framework's `main` needs a framework release before the release workflow of the theme can pass.
+- `composer.json` requires the released framework (`^0.20`); a feature of the framework's `main` needs a framework release before the release workflow of the theme can pass.
 - `screenshot.png` (1200 × 900) is the demo page `tests/e2e/demo.html` as a visitor sees it: after a change of the design, run `tests/screenshot` (a fresh instance of wp-test-env) and commit the new image.
 - A release tag `v<version>` equals `Version:` in `style.css`; every GitHub release gets written release notes.

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Facts;
+namespace WebCodingCat\Strata\Block\Facts;
 
-use Saij\WpAppFramework\Value\Link;
-use Saij\WpAppFramework\Value\PlainText;
+use WebCodingCat\WpAppFramework\Value\Link;
+use WebCodingCat\WpAppFramework\Value\PlainText;
 
 final readonly class FactAttributes
 {

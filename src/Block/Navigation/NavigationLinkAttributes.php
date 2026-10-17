@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Saij\Strata\Block\Navigation;
+namespace WebCodingCat\Strata\Block\Navigation;
 
-use Saij\WpAppFramework\Value\Link;
-use Saij\WpAppFramework\Value\PlainText;
+use WebCodingCat\WpAppFramework\Value\Link;
+use WebCodingCat\WpAppFramework\Value\PlainText;
 
 final readonly class NavigationLinkAttributes
 {
