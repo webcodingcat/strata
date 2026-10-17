@@ -1,4 +1,5 @@
-{% set image = wp_attachment_image(attrs.imageId, 'large', {class: 'block h-auto w-full' ~ (attrs.rounded ? ' rounded-control' : '')}) %}
+{# Captured as markup: a variable set to the result of the function would be escaped when printed. #}
+{% set image %}{{ wp_attachment_image(attrs.imageId, 'large', {class: 'block h-auto w-full' ~ (attrs.rounded ? ' rounded-control' : '')}) }}{% endset %}
 <figure {{ block_wrapper_attributes({class: 'strata-image m-0'}) }}>
     <div class="strata-image__media"{{ field('imageId') }}>
         {% if attrs.link.url and not is_editor() %}<a {{ link_attributes(attrs.link) }}>{{ image }}</a>{% else %}{{ image }}{% endif %}

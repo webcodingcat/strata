@@ -2,6 +2,8 @@
  * Content blocks on the front end: people with their contact links, facts with icons and links, and a glossary whose
  * index links every letter to its first term.
  */
+const path = require( 'path' );
+
 const { test, expect } = require( '../fixtures' );
 
 const { block, cleanUp, createPost } = require( '../helpers' );
@@ -16,6 +18,40 @@ const url = ( value ) => ( {
 test.describe( 'Content blocks', () => {
 	test.afterEach( async ( { requestUtils } ) => {
 		await cleanUp( requestUtils );
+	} );
+
+	test( 'show an image of the media library as an image, not as text', async ( {
+		page,
+		requestUtils,
+	} ) => {
+		const media = await requestUtils.uploadMedia(
+			path.join( __dirname, '../assets/image.png' )
+		);
+		try {
+			const post = await createPost( requestUtils, {
+				content: block(
+					'strata/section',
+					{},
+					block( 'strata/image', {
+						imageId: media.id,
+						caption: 'Red',
+					} )
+				),
+			} );
+			await page.goto( post.link );
+
+			const figure = page.locator( '.strata-image' );
+			await expect( figure.locator( 'img' ) ).toHaveAttribute(
+				'src',
+				/image.*\.png$/
+			);
+			await expect(
+				figure.locator( '.strata-image__media' )
+			).not.toContainText( '<img' );
+			await expect( figure.locator( 'figcaption' ) ).toHaveText( 'Red' );
+		} finally {
+			await requestUtils.deleteMedia( media.id );
+		}
 	} );
 
 	test( 'show people in a grid, with phone and email as links where given', async ( {
