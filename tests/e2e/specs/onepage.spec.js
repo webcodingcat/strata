@@ -22,6 +22,23 @@ test.describe( 'One page', () => {
 		expect( Object.keys( types ) ).toContain( 'page' );
 	} );
 
+	test( 'shows a page as front page since the switch to the theme', async ( {
+		page,
+		requestUtils,
+	} ) => {
+		const settings = await requestUtils.rest( { path: '/wp/v2/settings' } );
+		expect( settings.show_on_front ).toBe( 'page' );
+		expect( settings.page_on_front ).toBeGreaterThan( 0 );
+		expect( settings.page_for_posts ).toBe( 0 );
+
+		const response = await page.goto( '/' );
+		expect( response.status() ).toBe( 200 );
+		// WordPress names the shown page in the classes of the body.
+		await expect( page.locator( 'body' ) ).toHaveClass(
+			new RegExp( `\\bpage-id-${ settings.page_on_front }\\b` )
+		);
+	} );
+
 	test( 'answers a search and an unknown address with the 404 page', async ( {
 		page,
 		expectConsole,

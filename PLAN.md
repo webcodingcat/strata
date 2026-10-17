@@ -10,7 +10,7 @@ This file records the decisions and the steps. Tick a step when its commits are 
 
 - `templates/*.html` are full site editing templates: `<header>` and `<footer>` are template parts (`tagName` header/footer), `<main>` is `core/post-content` with `tagName: main` (allowed by WordPress: `wp-includes/blocks/post-content.php:65`) and the default layout, so sections are direct children of `<main>` and WordPress does not constrain their width. The 404 page is the template part `not-found` as `<main>`.
 - The top level of a page holds sections only: every other block of the theme can only be inserted inside a section (`ancestor`), the core blocks of the header as well.
-- A one-page site has no blog and no search: the post type `post` with categories and tags is hidden in the backend, the REST API and the front end; a search answers with the 404 page.
+- A one-page site has no blog and no search: the post type `post` with categories and tags is hidden in the backend, the REST API and the front end; a search answers with the 404 page. When the site switches to the theme without a static front page, the first published page becomes it, or a new page "Home" (`src/Site/FrontPage.php`).
 - Header and footer consist of single blocks and are edited in the site editor; the theme ships a sensible default:
   - header: Section › Group (row) › `core/site-title` + `core/site-tagline`; no navigation;
   - footer: Section › Group (row) › Paragraph with the links of the legal pages (chosen by the user) + Copyright.
